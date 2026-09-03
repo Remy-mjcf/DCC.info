@@ -172,14 +172,16 @@ export default async function renderTattoos(panel) {
 
   renderLoading(listContainer);
 
-  let tattoos;
+  let tattoos = [];
+  let loadError = null;
   try {
     tattoos = await fetchJSON(DATA_PATH);
   } catch (err) {
-    renderError(listContainer, `Couldn't load tattoos: ${err.message}`);
-    return;
+    loadError = err;
   }
 
+  // The 3D scene (humanoid placeholder, lighting, controls) doesn't depend
+  // on tattoo data existing -- always show it, even with zero markers.
   const { markerCount } = setupScene(sceneContainer, tattoos, (tattoo) => {
     renderTattooDetail(detailContainer, tattoo);
   });
@@ -190,5 +192,9 @@ export default async function renderTattoos(panel) {
     );
   }
 
-  renderCardGrid(listContainer, tattoos, buildListCard, "No tattoos yet -- run the extraction pipeline.");
+  if (loadError) {
+    renderError(listContainer, `Couldn't load tattoos: ${loadError.message}`);
+  } else {
+    renderCardGrid(listContainer, tattoos, buildListCard, "No tattoos yet -- run the extraction pipeline.");
+  }
 }
