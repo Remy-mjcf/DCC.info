@@ -1,0 +1,38 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "crawler.schema.json",
+  "title": "Crawler",
+  "type": "object",
+  "properties": {
+    "id": { "type": "string" },
+    "name": { "type": "string" },
+    "class": { "type": "string" },
+    "species": { "type": "string" },
+    "status": { "type": "string" },
+    "first_appearance": {
+      "type": "object",
+      "properties": {
+        "book_id": { "type": "string" },
+        "chapter": { "type": "integer", "minimum": 1 }
+      },
+      "required": ["book_id", "chapter"],
+      "additionalProperties": false
+    },
+    "affiliations": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "summary": { "type": "string" }
+  },
+  "required": [
+    "id",
+    "name",
+    "class",
+    "species",
+    "status",
+    "first_appearance",
+    "affiliations",
+    "summary"
+  ],
+  "additionalProperties": false
+}

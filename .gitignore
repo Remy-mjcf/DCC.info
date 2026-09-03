@@ -1,0 +1,20 @@
+# Python
+DCCscraping/venv/
+DCCscraping/__pycache__/
+**/__pycache__/
+*.pyc
+
+# Scraping pipeline internals (regenerable / pending review)
+DCCscraping/cache/
+DCCscraping/needs_review/
+
+# Env / secrets
+.env
+
+# Node (if DCCsite ever grows a build step)
+node_modules/
+
+# OS / editor cruft
+.DS_Store
+.vscode/
+.idea/

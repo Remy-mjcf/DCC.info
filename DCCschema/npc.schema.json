@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "npc.schema.json",
+  "title": "NPC",
+  "type": "object",
+  "properties": {
+    "id": { "type": "string" },
+    "name": { "type": "string" },
+    "role": { "type": "string" },
+    "species": { "type": "string" },
+    "first_appearance": {
+      "type": "object",
+      "properties": {
+        "book_id": { "type": "string" },
+        "chapter": { "type": "integer", "minimum": 1 }
+      },
+      "required": ["book_id", "chapter"],
+      "additionalProperties": false
+    },
+    "related_crawlers": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "summary": { "type": "string" }
+  },
+  "required": [
+    "id",
+    "name",
+    "role",
+    "species",
+    "first_appearance",
+    "related_crawlers",
+    "summary"
+  ],
+  "additionalProperties": false
+}

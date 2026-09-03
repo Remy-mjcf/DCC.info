@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "book.schema.json",
+  "title": "Book",
+  "type": "object",
+  "properties": {
+    "id": { "type": "string" },
+    "title": { "type": "string" },
+    "order": { "type": "integer", "minimum": 1 }
+  },
+  "required": ["id", "title", "order"],
+  "additionalProperties": false
+}

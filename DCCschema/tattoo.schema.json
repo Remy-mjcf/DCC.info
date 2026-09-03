@@ -1,0 +1,54 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "tattoo.schema.json",
+  "title": "Tattoo",
+  "type": "object",
+  "properties": {
+    "id": { "type": "string" },
+    "name": { "type": "string" },
+    "crawler_id": { "type": "string" },
+    "acquired": {
+      "type": "object",
+      "properties": {
+        "book_id": { "type": "string" },
+        "chapter": { "type": "integer", "minimum": 1 },
+        "scenario": { "type": "string" }
+      },
+      "required": ["book_id", "chapter", "scenario"],
+      "additionalProperties": false
+    },
+    "placement": {
+      "type": "object",
+      "properties": {
+        "body_part": { "type": "string" },
+        "position_3d": {
+          "type": "object",
+          "properties": {
+            "x": { "type": "number" },
+            "y": { "type": "number" },
+            "z": { "type": "number" }
+          },
+          "required": ["x", "y", "z"],
+          "additionalProperties": false
+        },
+        "side": { "type": "string", "enum": ["front", "back"] }
+      },
+      "required": ["body_part", "position_3d", "side"],
+      "additionalProperties": false
+    },
+    "effect": { "type": "string" },
+    "image": { "type": "string" },
+    "source_url": { "type": "string", "format": "uri" }
+  },
+  "required": [
+    "id",
+    "name",
+    "crawler_id",
+    "acquired",
+    "placement",
+    "effect",
+    "image",
+    "source_url"
+  ],
+  "additionalProperties": false
+}

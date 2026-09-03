@@ -1,0 +1,4 @@
+requests
+mwparserfromhell
+anthropic
+jsonschema
