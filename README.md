@@ -52,15 +52,24 @@ cp .env.example .env
 
 ### Site
 
-`DCCsite/` is a static site (no build step). Serve it locally with any
-static file server, e.g.:
+`DCCsite/` is a static site (no build step) that fetches its data from
+`../DCCdata/*.json` relative to `index.html`, so it must be served from
+the **repo root**, not from inside `DCCsite/`:
 
 ```bash
-cd DCCsite
 python3 -m http.server 8000
+# then open http://localhost:8000/DCCsite/
 ```
+
+Three.js (used by the Tattoos tab) loads from a CDN via an import map in
+`index.html` — no local install needed, but it does require network
+access in the browser.
 
 ## Status
 
-Currently scaffolding schemas in `DCCschema/` before building the
-scraping pipeline (`fetch.py`, `extract.py`) or the frontend.
+Scraping pipeline (`fetch.py`, `extract.py`, `validate.py`) and the
+frontend scaffold are in place. `DCCsite/js/tabs/tattoos.js` renders
+tattoo markers by treating `placement.position_3d` as normalized [0, 1]
+coordinates mapped onto a placeholder humanoid mesh's bounding box
+(`BODY_BOUNDS` in that file) — real coordinates and a real body mesh
+(`DCCsite/assets/models/`) are still pending.

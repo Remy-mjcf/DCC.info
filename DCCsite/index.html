@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dungeon Crawler Carl — Fan Wiki</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+        "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+      }
+    }
+  </script>
+</head>
+<body>
+  <header>
+    <h1>Dungeon Crawler Carl</h1>
+    <nav class="tabs" id="tabs">
+      <button class="tab-button" data-tab="crawlers">Crawlers</button>
+      <button class="tab-button" data-tab="npcs">NPCs</button>
+      <button class="tab-button" data-tab="tattoos">Tattoos</button>
+      <button class="tab-button" data-tab="books">Books</button>
+    </nav>
+  </header>
+
+  <main id="tab-panels">
+    <section class="tab-panel" id="panel-crawlers" data-panel="crawlers"></section>
+    <section class="tab-panel" id="panel-npcs" data-panel="npcs"></section>
+
+    <section class="tab-panel" id="panel-tattoos" data-panel="tattoos">
+      <div class="tattoo-layout">
+        <div id="tattoo-scene" class="tattoo-scene"></div>
+        <div id="tattoo-detail" class="tattoo-detail">
+          <p class="tattoo-detail-placeholder">Click a marker on the model to inspect a tattoo.</p>
+        </div>
+      </div>
+      <div id="tattoo-list"></div>
+    </section>
+
+    <section class="tab-panel" id="panel-books" data-panel="books"></section>
+  </main>
+
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>
