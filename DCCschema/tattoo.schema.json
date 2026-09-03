@@ -31,7 +31,7 @@
           "required": ["x", "y", "z"],
           "additionalProperties": false
         },
-        "side": { "type": "string", "enum": ["front", "back"] }
+        "side": { "type": "string" }
       },
       "required": ["body_part", "position_3d", "side"],
       "additionalProperties": false
