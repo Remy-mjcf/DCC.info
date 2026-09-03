@@ -13,5 +13,223 @@
     ],
     "summary": "Agatha is an eccentric crawler who travels the dungeon pushing a squeaky shopping cart without selecting a class or joining a party. In reality, she is an ancient Residual entity known as Agent 22 who took over a human body on Earth before the dungeon's arrival. Moving unpredictably through the floors while evading dungeon surveillance, she works toward a secret agenda to end all biological life in the universe.",
     "id": "agatha"
+  },
+  {
+    "name": "Daniel Bautista",
+    "class": "Swashbuckler",
+    "species": "Tigran",
+    "status": "Alive",
+    "first_appearance": {
+      "book_id": "b2",
+      "chapter": 23
+    },
+    "affiliations": [
+      "Team Katia",
+      "Safehome Yolanda",
+      "Princess Posse"
+    ],
+    "summary": "Daniel Bautista is an Earth crawler and the sole survivor of a large family that entered the dungeon together. A Tigran Swashbuckler, he fights using a curved sword and a unique collection of summonable plush figures. He becomes a loyal ally to Carl and Donut, eventually serving as a general in the Princess Posse.",
+    "id": "bautista"
+  },
+  {
+    "name": "Elle McGibbons",
+    "class": "Hailstorm Queen",
+    "species": "Frost Maiden",
+    "status": "Alive",
+    "first_appearance": {
+      "book_id": "b1",
+      "chapter": 31
+    },
+    "affiliations": [
+      "Team Meadow Lark",
+      "Safehome Yolanda",
+      "Desperado Club",
+      "Princess Posse"
+    ],
+    "summary": "Elle McGibbons is an elderly Earth crawler and former nursing home resident who descends into the dungeon alongside Team Meadow Lark. After choosing the Frost Maiden race, she transforms into a fierce and exceptionally loyal spellcaster progressing along a rare four-seasons build path. Despite her age and lingering dementia, she serves as a key scout, formidable ice mage, and vital emotional anchor for her allies.",
+    "id": "elle_mcgibbons"
+  },
+  {
+    "name": "Florin",
+    "class": "Shotgun Messenger",
+    "species": "Crocodilian",
+    "status": "Alive",
+    "first_appearance": {
+      "book_id": "b2",
+      "chapter": 14
+    },
+    "affiliations": [
+      "Princess Posse",
+      "101st Crocodiles",
+      "Safehome Yolanda",
+      "Desperado Club"
+    ],
+    "summary": "Florin is an Earth crawler who selected the Crocodilian race and the Shotgun Messenger class. Known for wielding a modified shotgun with unlimited ammunition, he is a pragmatic combatant who became a general in the Princess Posse. Following the tragic death of his partner Ifechi, Florin dedicated himself to protecting Lucia Mar throughout the dungeon.",
+    "id": "florin"
+  },
+  {
+    "name": "Frank Q",
+    "class": "Blood Assassin",
+    "species": "Night Elf",
+    "status": "Deceased",
+    "first_appearance": {
+      "book_id": "b1",
+      "chapter": 20
+    },
+    "affiliations": [
+      "Maggie My",
+      "Yvette",
+      "Immigration and Customs Enforcement"
+    ],
+    "summary": "Frank Q is a former ICE agent from Earth who became a Player Killer alongside his ex-wife, Maggie My, on the first floor of the dungeon. After selecting the Night Elf species and Blood Assassin class, he eventually parted ways with Maggie and stopped fighting following the tragic death of their daughter, Yvette. He later gave Carl a cursed legendary ring in the Desperado Club shortly before being killed.",
+    "id": "frank_q"
+  },
+  {
+    "name": "Imani",
+    "class": "Fire Spiritualist Class",
+    "species": "Obsidian Butterfly",
+    "status": "Alive",
+    "first_appearance": {
+      "book_id": "b1",
+      "chapter": 22
+    },
+    "affiliations": [
+      "Meadow Lark",
+      "Safehome Yolanda",
+      "Princess Posse",
+      "The Good Guys Alliance"
+    ],
+    "summary": "Imani is a former eldercare worker who entered the Dungeon alongside her patients and co-workers. After selecting the Obsidian Butterfly species and Fire Spiritualist class, she becomes a crucial support healer and protective leader for her group. She serves as the guildmaster of Safehome Yolanda and later becomes a general in the Princess Posse.",
+    "id": "imani"
+  },
+  {
+    "name": "Jurgen",
+    "class": "Harii",
+    "species": "Human",
+    "status": "Alive",
+    "first_appearance": {
+      "book_id": null,
+      "chapter": 62
+    },
+    "affiliations": [
+      "Princess Posse",
+      "105th Scream Warriors",
+      "Flamengo"
+    ],
+    "summary": "Jurgen is a human crawler who selected the Harii barbarian class on the dungeon's Third Floor. He entered the dungeon with his pregnant wife Heidi and continues to speak to her as if she were still with him. Later, he joined the Princess Posse as a General leading the 105th Scream Warriors battalion during the Ninth Floor siege.",
+    "id": "jurgen"
+  },
+  {
+    "name": "Li Jun",
+    "class": "Street Monk Class",
+    "species": "Human",
+    "status": "Deceased",
+    "first_appearance": {
+      "book_id": "b1",
+      "chapter": 42
+    },
+    "affiliations": [
+      "Team Li Na",
+      "Safehome Yolanda",
+      "Princess Posse"
+    ],
+    "summary": "Li Jun was a human crawler from Earth who entered the dungeon alongside his sister Li Na and chose the Street Monk class. Characterized by his gentle demeanor and selfless nature, he consistently volunteered for dangerous missions to aid his allies. He ultimately sacrificed his life on the ninth floor to buy crucial time for Princess Donut during a battle against the god Harpocrates.",
+    "id": "li_jun"
+  },
+  {
+    "name": "Li Na",
+    "class": "Slave Driver Class",
+    "species": "Changbi Demon",
+    "status": "Alive",
+    "first_appearance": {
+      "book_id": "b1",
+      "chapter": 42
+    },
+    "affiliations": [
+      "Team Li Na",
+      "Safehome Yolanda",
+      "Princess Posse",
+      "107th White Dragons"
+    ],
+    "summary": "Li Na is a Chinese crawler who entered the dungeon alongside her brother Li Jun and friend Zhang, eventually transforming into a powerful Changbi Demon. Renowned for her terrifying dread auras and ruthless tactical mind, she proved to be one of the dungeon's most effective and dangerous combatants. Following her brother's death and accumulating severe debuffs, she was successfully smuggled out of the dungeon to the Pineapple Cabaret.",
+    "id": "li_na"
+  },
+  {
+    "name": "Louis Santiago 2",
+    "class": "Extermination Professional",
+    "species": "Human",
+    "status": "Alive",
+    "first_appearance": {
+      "book_id": "b4",
+      "chapter": 3
+    },
+    "affiliations": [
+      "Team Katia",
+      "Safehome Yolanda",
+      "Princess Posse",
+      "Team Retribution"
+    ],
+    "summary": "Louis Santiago 2 is a human crawler from Miami who initially relies on alcohol and evasion to survive the dungeon. Despite his early cowardice and under-leveled status, he grows into a loyal ally, a skilled pilot, and a vital member of Team Katia. He serves as an air bomber and squad conscience during the later floors before finding himself displaced to Sheol on the Fifteenth Floor.",
+    "id": "louis"
+  },
+  {
+    "name": "Maggie My",
+    "class": null,
+    "species": "Human",
+    "status": "Deceased",
+    "first_appearance": {
+      "book_id": "b1",
+      "chapter": 20
+    },
+    "affiliations": [],
+    "summary": "Maggie My is a human crawler who entered the Dungeon alongside Frank Q and her teenage daughter Yvette. Driven by grief and anger over the death of her daughter and the collapse of her family, she became a ruthless player killer fixated on hunting down Carl and Donut. She eventually used the Infiltrator race to take over the body of another crawler, Chris Andrews, before ultimately being killed.",
+    "id": "maggie_my"
+  },
+  {
+    "name": "Miriam Dom",
+    "class": "Shepherd",
+    "species": "Vampire",
+    "status": "Deceased",
+    "first_appearance": {
+      "book_id": "b1",
+      "chapter": 47
+    },
+    "affiliations": [
+      "Prepotente",
+      "Bianca",
+      "Club Vanquisher"
+    ],
+    "summary": "Miriam Dom was an Earth crawler who entered the Dungeon with fifteen goats and crawled alongside Prepotente and Bianca. Known widely as the goat lady, she utilized her Shepherd class and supportive magic to keep her animal companions alive and successfully navigated deep into the Dungeon. She eventually contracted vampirism on the fifth floor and ultimately met her end on the sixth floor to halt a spreading curse.",
+    "id": "miriam_dom"
+  },
+  {
+    "name": "Prepotente Lorenzo De La Rosa",
+    "class": "Profane Vitiate",
+    "species": "Caprid",
+    "status": "Alive",
+    "first_appearance": {
+      "book_id": "b2",
+      "chapter": 14
+    },
+    "affiliations": [
+      "Princess Posse"
+    ],
+    "summary": "Prepotente Lorenzo De La Rosa, often called Pony, is a crawler from Italy who entered the dungeon as a Boer goat belonging to Miriam Dom before an Enhanced Pet Biscuit transformed him into a bipedal caprid. Brilliant, arrogant, and emotionally fragile, he fights alongside Miriam using a methodical strategy of stacking weak debuffs to overcome powerful boss enemies. Following Miriam's tragic death, he becomes a grief-driven and formidable one-man army seeking vengeance against those responsible.",
+    "id": "prepotente"
+  },
+  {
+    "name": "Scolopendra",
+    "class": null,
+    "species": "Giant Centipede",
+    "status": "Alive",
+    "first_appearance": {
+      "book_id": "b2",
+      "chapter": 3
+    },
+    "affiliations": [
+      "Royal Court of Princess Donut"
+    ],
+    "summary": "Scolopendra is a colossal centipede monster and the legendary Level 500 Dungeon Boss of the World Dungeon's volcano. Summoned far ahead of schedule in the Eleventh Floor arena by Carl, she is accidentally transformed into a Level 1 Crawler named Sexy Scolopendra instead of being killed, and she automatically joins Princess Donut's party.",
+    "id": "scolopendra"
   }
 ]

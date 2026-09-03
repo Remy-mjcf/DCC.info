@@ -63,11 +63,17 @@ NEEDS_REVIEW_ROOT = Path(__file__).parent / "needs_review"
 
 WIKI_BASE_URL = "https://dungeon-crawler-carl.fandom.com/wiki"
 # Verify this is still a current free-tier model at https://ai.google.dev/gemini-api/docs/pricing
-# before relying on it -- Google's free-tier lineup changes over time. (Was
-# gemini-2.0-flash; the API itself returned a 404 recommending this model.)
-DEFAULT_MODEL = "gemini-3.6-flash"
+# or https://aistudio.google.com/rate-limit before relying on it -- Google's
+# free-tier lineup changes over time. History: gemini-2.0-flash (initial
+# choice) 404'd as retired; gemini-3.6-flash worked but its free tier is
+# only 5 RPM / 20 RPD -- confirmed on the rate-limit dashboard, and far too
+# tight to populate the site in one sitting. gemini-3.5-flash-lite offers
+# 15 RPM / 500 RPD instead, a real quality-vs-quota tradeoff (Lite models
+# are less capable) accepted deliberately for extraction throughput.
+DEFAULT_MODEL = "gemini-3.5-flash-lite"
 MAX_NULL_REQUIRED_FIELDS = 2
-DEFAULT_RATE_LIMIT_SECONDS = 4.0
+# 15 RPM = one call per 4s at the limit; add a small safety margin.
+DEFAULT_RATE_LIMIT_SECONDS = 4.5
 DEFAULT_MAX_RETRIES = 3
 
 ENTITY_CONFIG = {
