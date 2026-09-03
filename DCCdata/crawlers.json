@@ -1,0 +1,17 @@
+[
+  {
+    "name": "Agatha",
+    "class": "None",
+    "species": "Human",
+    "status": "Alive",
+    "first_appearance": {
+      "book_id": "b1",
+      "chapter": 22
+    },
+    "affiliations": [
+      "War Mage Rebellion"
+    ],
+    "summary": "Agatha is an eccentric crawler who travels the dungeon pushing a squeaky shopping cart without selecting a class or joining a party. In reality, she is an ancient Residual entity known as Agent 22 who took over a human body on Earth before the dungeon's arrival. Moving unpredictably through the floors while evading dungeon surveillance, she works toward a secret agenda to end all biological life in the universe.",
+    "id": "agatha"
+  }
+]

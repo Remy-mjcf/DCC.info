@@ -63,8 +63,9 @@ NEEDS_REVIEW_ROOT = Path(__file__).parent / "needs_review"
 
 WIKI_BASE_URL = "https://dungeon-crawler-carl.fandom.com/wiki"
 # Verify this is still a current free-tier model at https://ai.google.dev/gemini-api/docs/pricing
-# before relying on it -- Google's free-tier lineup changes over time.
-DEFAULT_MODEL = "gemini-2.0-flash"
+# before relying on it -- Google's free-tier lineup changes over time. (Was
+# gemini-2.0-flash; the API itself returned a 404 recommending this model.)
+DEFAULT_MODEL = "gemini-3.6-flash"
 MAX_NULL_REQUIRED_FIELDS = 2
 DEFAULT_RATE_LIMIT_SECONDS = 4.0
 DEFAULT_MAX_RETRIES = 3
