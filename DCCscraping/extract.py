@@ -103,6 +103,20 @@ ENTITY_CONFIG = {
             "short description of its mechanical/game effect)."
         ),
     },
+    "item": {
+        "schema_file": "item.schema.json",
+        "cache_dir": "Items",
+        "data_file": "items.json",
+        "omit_fields": ["source_url"],
+        "instructions": (
+            "This article is about an item (gear, a consumable, or a crafted "
+            "object). Extract: name; type (the item's category/slot as stated, "
+            "e.g. \"Clothing (Chest)\", \"Weapon\", \"Consumable\"); effects (a "
+            "list of its stated mechanical effects/bonuses, each as clean text "
+            "with no wiki markup); source (how it's typically obtained, as free "
+            "text); and a 2-3 sentence summary in your own words."
+        ),
+    },
 }
 
 
@@ -243,15 +257,19 @@ def unique_slug(base_slug: str, existing_ids: set[str]) -> str:
     return f"{base_slug}_{n}"
 
 
+SOURCE_URL_ENTITIES = {"tattoo", "item"}
+
+
 def inject_fields(entity_type: str, title: str, extracted: dict, existing_ids: set[str]) -> dict:
     extracted = dict(extracted)
     if entity_type == "tattoo":
         extracted["id"] = next_tattoo_id(existing_ids)
-        extracted["source_url"] = f"{WIKI_BASE_URL}/{quote(title.replace(' ', '_'))}"
         if extracted.get("crawler_id"):
             extracted["crawler_id"] = slugify(extracted["crawler_id"])
     else:
         extracted["id"] = unique_slug(slugify(title), existing_ids)
+    if entity_type in SOURCE_URL_ENTITIES:
+        extracted["source_url"] = f"{WIKI_BASE_URL}/{quote(title.replace(' ', '_'))}"
     return extracted
 
 

@@ -27,6 +27,7 @@ CATEGORY_CACHE_DIRS = {
     "Crawlers": "Characters",
     "NPCs": "NPCs",
     "Tattoos": "Tattoos",
+    "Equipped Items": "Items",
 }
 
 
@@ -83,7 +84,10 @@ class MediaWikiClient:
         page = next(iter(pages.values()))
         if "missing" in page:
             return None
-        return page["revisions"][0]["slots"]["main"]["*"]
+        wikitext = page["revisions"][0]["slots"]["main"]["*"]
+        if wikitext.strip().upper().startswith("#REDIRECT"):
+            return None
+        return wikitext
 
 
 def fetch_category(client: MediaWikiClient, category: str, cache_dir_name: str | None = None,
@@ -106,7 +110,7 @@ def fetch_category(client: MediaWikiClient, category: str, cache_dir_name: str |
 
         wikitext = client.get_wikitext(title)
         if wikitext is None:
-            print(f"  skip (missing page): {title}")
+            print(f"  skip (missing or redirect page): {title}")
             continue
 
         dest.write_text(wikitext, encoding="utf-8")

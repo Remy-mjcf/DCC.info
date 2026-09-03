@@ -1,12 +1,14 @@
 import renderCrawlers from "./tabs/crawlers.js";
 import renderNpcs from "./tabs/npcs.js";
 import renderTattoos from "./tabs/tattoos.js";
+import renderItems from "./tabs/items.js";
 import renderBooks from "./tabs/books.js";
 
 const TAB_RENDERERS = {
   crawlers: renderCrawlers,
   npcs: renderNpcs,
   tattoos: renderTattoos,
+  items: renderItems,
   books: renderBooks,
 };
 
