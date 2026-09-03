@@ -5,9 +5,9 @@ as a .wikitext file under cache/<dir>/. Re-running skips pages already
 cached unless --force is passed.
 
 Usage:
-    python fetch.py Crawlers
-    python fetch.py NPCs --limit 5
-    python fetch.py Tattoos --force
+    python fetch.py --category Crawlers
+    python fetch.py --category NPCs --limit 5
+    python fetch.py --category Tattoos --force
 """
 
 import argparse
@@ -115,7 +115,7 @@ def fetch_category(client: MediaWikiClient, category: str, cache_dir_name: str |
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    parser.add_argument("category", help="Wiki category name, e.g. Crawlers, NPCs, Tattoos")
+    parser.add_argument("--category", required=True, help="Wiki category name, e.g. Crawlers, NPCs, Tattoos")
     parser.add_argument("--cache-dir", help="Override the local cache subdirectory name")
     parser.add_argument("--force", action="store_true", help="Re-fetch pages even if already cached")
     parser.add_argument("--limit", type=int, help="Only fetch the first N pages (for testing)")
