@@ -3,8 +3,9 @@
 A fan site for the *Dungeon Crawler Carl* book series. Content (crawlers,
 NPCs, tattoos, items, etc.) is sourced from the [Dungeon Crawler Carl
 Fandom wiki](https://dungeon-crawler-carl.fandom.com) via its MediaWiki
-API, run through an LLM extraction step into structured JSON, validated
-against shared schemas, and rendered as a static site.
+API, run through an LLM extraction step (Gemini API, free tier) into
+structured JSON, validated against shared schemas, and rendered as a
+static site.
 
 ## Architecture
 
@@ -43,12 +44,21 @@ source venv/bin/activate
 pip install -r requirements.txt
 ```
 
-Copy `.env.example` to `.env` at the repo root and fill in your API key:
+`extract.py` uses the [Gemini API](https://aistudio.google.com/apikey)
+free tier. Get a free API key there, then copy `.env.example` to `.env`
+at the repo root and fill it in:
 
 ```bash
 cp .env.example .env
-# then edit .env and set ANTHROPIC_API_KEY
+# then edit .env and set GEMINI_API_KEY
 ```
+
+Free-tier requests are rate-limited per minute; `extract.py` throttles
+itself client-side (`--rate-limit`, default 4s between calls) and
+retries transient/rate-limit errors with backoff (`--max-retries`).
+Verify `DEFAULT_MODEL` in `extract.py` is still a current free-tier
+model at the [pricing page](https://ai.google.dev/gemini-api/docs/pricing)
+before relying on it — Google's free-tier lineup changes over time.
 
 ### Site
 

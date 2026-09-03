@@ -1,8 +1,9 @@
 """LLM-driven wikitext -> JSON extraction.
 
 Reads cached wikitext for a given entity type (crawler, npc, tattoo),
-extracts structured fields via a forced Claude tool call against the
-matching DCCschema/*.schema.json contract, and routes each result:
+extracts structured fields via the Gemini API's schema-constrained JSON
+output (response_schema + response_mime_type="application/json") against
+the matching DCCschema/*.schema.json contract, and routes each result:
 
   - passes schema validation AND has <=2 null required fields
         -> merged into DCCdata/<entity>.json
@@ -30,6 +31,11 @@ computes them directly and any model guess would just be discarded:
   - id: crawler/npc get slug(title); tattoos get a sequential tattoo_NNN
   - tattoo.source_url: derived directly from the wiki page title
 
+Uses the Gemini API free tier -- get a key at https://aistudio.google.com/apikey
+and put it in .env as GEMINI_API_KEY. Free-tier requests are rate-limited
+per minute, so calls are throttled client-side (--rate-limit) and retried
+with backoff on transient/rate-limit errors (--max-retries).
+
 Usage:
     python extract.py crawler
     python extract.py npc --limit 5
@@ -41,10 +47,12 @@ import copy
 import json
 import os
 import re
+import time
 from pathlib import Path
 from urllib.parse import quote
 
-from anthropic import Anthropic
+from google import genai
+from google.genai import types
 from jsonschema.validators import Draft202012Validator
 
 ROOT = Path(__file__).parent.parent
@@ -54,8 +62,12 @@ CACHE_ROOT = Path(__file__).parent / "cache"
 NEEDS_REVIEW_ROOT = Path(__file__).parent / "needs_review"
 
 WIKI_BASE_URL = "https://dungeon-crawler-carl.fandom.com/wiki"
-DEFAULT_MODEL = "claude-sonnet-5"
+# Verify this is still a current free-tier model at https://ai.google.dev/gemini-api/docs/pricing
+# before relying on it -- Google's free-tier lineup changes over time.
+DEFAULT_MODEL = "gemini-2.0-flash"
 MAX_NULL_REQUIRED_FIELDS = 2
+DEFAULT_RATE_LIMIT_SECONDS = 4.0
+DEFAULT_MAX_RETRIES = 3
 
 ENTITY_CONFIG = {
     "crawler": {
@@ -197,6 +209,34 @@ def build_extraction_schema(schema: dict, omit_fields: list[str]) -> dict:
     return extraction_schema
 
 
+def to_gemini_schema(schema: dict) -> dict:
+    """Converts our JSON Schema (type unions for nullability) into Gemini's
+    Schema format (uppercase type + a separate `nullable` bool)."""
+    node_type = schema.get("type")
+    result = {}
+
+    if isinstance(node_type, list):
+        non_null_types = [t for t in node_type if t != "null"]
+        if non_null_types:
+            result["type"] = non_null_types[0].upper()
+        if "null" in node_type:
+            result["nullable"] = True
+    elif isinstance(node_type, str):
+        result["type"] = node_type.upper()
+
+    if result.get("type") == "OBJECT" and "properties" in schema:
+        result["properties"] = {k: to_gemini_schema(v) for k, v in schema["properties"].items()}
+        if "required" in schema:
+            result["required"] = schema["required"]
+    if result.get("type") == "ARRAY" and "items" in schema:
+        result["items"] = to_gemini_schema(schema["items"])
+    for key in ("enum", "minimum", "maximum"):
+        if key in schema:
+            result[key] = schema[key]
+
+    return result
+
+
 def count_null_required_fields(schema: dict, record: dict) -> int:
     """Recursively counts required leaf fields that are missing or null."""
     count = 0
@@ -224,8 +264,8 @@ def build_system_prompt(entity_type: str, books: list[dict]) -> str:
     return (
         "You are extracting structured data from an article on the Dungeon "
         "Crawler Carl Fandom wiki, for a fan site. You will be given the "
-        "wikitext of a single article. Call the record_extraction tool exactly "
-        "once with the extracted fields. Only use information explicitly "
+        "wikitext of a single article. Respond with exactly one JSON object "
+        "matching the required schema. Only use information explicitly "
         "stated or very clearly implied by the article -- never invent facts. "
         "If a field's value cannot be determined from the article text, set "
         "it to null -- do not guess or infer a plausible-sounding value just "
@@ -289,25 +329,50 @@ def write_json(path: Path, data) -> None:
     path.write_text(json.dumps(data, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
 
 
-def extract_page(client: Anthropic, model: str, entity_type: str, title: str, wikitext: str,
-                  extraction_schema: dict, system_prompt: str) -> dict:
-    response = client.messages.create(
-        model=model,
-        max_tokens=4096,
-        system=system_prompt,
-        tools=[{
-            "name": "record_extraction",
-            "description": "Record the structured data extracted from the wiki article.",
-            "input_schema": extraction_schema,
-        }],
-        tool_choice={"type": "tool", "name": "record_extraction"},
-        messages=[{"role": "user", "content": f"Article title: {title}\n\n{wikitext}"}],
+class RateLimiter:
+    def __init__(self, min_interval_seconds: float):
+        self.min_interval = min_interval_seconds
+        self._last_call = 0.0
+
+    def wait(self) -> None:
+        elapsed = time.monotonic() - self._last_call
+        if elapsed < self.min_interval:
+            time.sleep(self.min_interval - elapsed)
+        self._last_call = time.monotonic()
+
+
+def extract_page(client: "genai.Client", model: str, title: str, wikitext: str,
+                  extraction_schema: dict, system_prompt: str,
+                  rate_limiter: RateLimiter, max_retries: int) -> dict:
+    gemini_schema = to_gemini_schema(extraction_schema)
+    config = types.GenerateContentConfig(
+        system_instruction=system_prompt,
+        response_mime_type="application/json",
+        response_schema=gemini_schema,
+        max_output_tokens=4096,
     )
-    tool_use = next(block for block in response.content if block.type == "tool_use")
-    return tool_use.input
+
+    last_error = None
+    for attempt in range(1, max_retries + 1):
+        rate_limiter.wait()
+        try:
+            response = client.models.generate_content(
+                model=model,
+                contents=f"Article title: {title}\n\n{wikitext}",
+                config=config,
+            )
+            return json.loads(response.text)
+        except Exception as error:  # broad: retry on any transient/rate-limit error from the SDK
+            last_error = error
+            if attempt < max_retries:
+                backoff = 5 * attempt
+                print(f"    retrying after error ({error}); waiting {backoff}s...")
+                time.sleep(backoff)
+    raise last_error
 
 
-def process_entity(client: Anthropic, model: str, entity_type: str, force: bool, limit: int | None) -> None:
+def process_entity(client: "genai.Client", model: str, entity_type: str, force: bool, limit: int | None,
+                    rate_limiter: RateLimiter, max_retries: int) -> None:
     config = ENTITY_CONFIG[entity_type]
     cache_dir = CACHE_ROOT / config["cache_dir"]
     review_dir = NEEDS_REVIEW_ROOT / config["cache_dir"]
@@ -342,7 +407,8 @@ def process_entity(client: Anthropic, model: str, entity_type: str, force: bool,
         raw_wikitext = wikitext_file.read_text(encoding="utf-8")
         cleaned = clean_wikitext(raw_wikitext)
 
-        extracted = extract_page(client, model, entity_type, title, cleaned, extraction_schema, system_prompt)
+        extracted = extract_page(client, model, title, cleaned, extraction_schema, system_prompt,
+                                  rate_limiter, max_retries)
         extracted = inject_fields(entity_type, title, extracted, existing_ids)
 
         errors = validate(schema, extracted)
@@ -380,12 +446,17 @@ def main():
     parser.add_argument("entity_type", choices=sorted(ENTITY_CONFIG))
     parser.add_argument("--force", action="store_true", help="Re-extract pages even if already processed")
     parser.add_argument("--limit", type=int, help="Only process the first N cached pages (for testing)")
-    parser.add_argument("--model", default=DEFAULT_MODEL, help="Anthropic model id (default: %(default)s)")
+    parser.add_argument("--model", default=DEFAULT_MODEL, help="Gemini model id (default: %(default)s)")
+    parser.add_argument("--rate-limit", type=float, default=DEFAULT_RATE_LIMIT_SECONDS,
+                         help="Minimum seconds between API calls, for the free-tier rate limit (default: %(default)s)")
+    parser.add_argument("--max-retries", type=int, default=DEFAULT_MAX_RETRIES,
+                         help="Retry attempts per page on API errors (default: %(default)s)")
     args = parser.parse_args()
 
     load_dotenv(ROOT / ".env")
-    client = Anthropic()
-    process_entity(client, args.model, args.entity_type, args.force, args.limit)
+    client = genai.Client()
+    rate_limiter = RateLimiter(args.rate_limit)
+    process_entity(client, args.model, args.entity_type, args.force, args.limit, rate_limiter, args.max_retries)
 
 
 if __name__ == "__main__":
