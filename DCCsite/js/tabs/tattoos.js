@@ -30,7 +30,7 @@ function normalizedToWorld(position3d) {
 
 function createHumanoidPlaceholder() {
   const group = new THREE.Group();
-  const material = new THREE.MeshStandardMaterial({ color: 0x8899aa, roughness: 0.7 });
+  const material = new THREE.MeshStandardMaterial({ color: 0x4d5568, roughness: 0.55, metalness: 0.15 });
 
   const torso = new THREE.Mesh(new THREE.CapsuleGeometry(0.3, 0.6, 4, 8), material);
   torso.position.y = 1.1;
@@ -74,7 +74,8 @@ function hasPlacement(tattoo) {
 
 function setupScene(sceneContainer, tattoos, onMarkerClick) {
   const scene = new THREE.Scene();
-  scene.background = new THREE.Color(0xeef0f2);
+  scene.background = new THREE.Color(0x161922);
+  scene.fog = new THREE.Fog(0x161922, 3, 8);
 
   const camera = new THREE.PerspectiveCamera(45, 1, 0.1, 100);
   camera.position.set(1.4, 1.4, 1.8);
@@ -86,12 +87,12 @@ function setupScene(sceneContainer, tattoos, onMarkerClick) {
   controls.enableDamping = true;
   controls.target.set(0, 1, 0);
 
-  scene.add(new THREE.HemisphereLight(0xffffff, 0x444444, 1.2));
-  const directional = new THREE.DirectionalLight(0xffffff, 1.5);
+  scene.add(new THREE.HemisphereLight(0x6f8fff, 0x0a0a12, 1.1));
+  const directional = new THREE.DirectionalLight(0x9fe8ff, 1.4);
   directional.position.set(2, 3, 2);
   scene.add(directional);
 
-  scene.add(new THREE.GridHelper(2, 10, 0xcccccc, 0xdddddd));
+  scene.add(new THREE.GridHelper(2, 10, 0x33e0c9, 0x252a36));
   scene.add(createHumanoidPlaceholder());
 
   const markers = [];

@@ -1,4 +1,24 @@
-/* Minimal styling -- polish after the data pipeline is proven out. */
+/* Dark, game-UI-inspired theme -- leans into the LitRPG "System" aesthetic
+   of the source material (stat blocks, HUD panels, terminal-ish accents). */
+
+:root {
+  --bg: #0d0f14;
+  --bg-elevated: #161922;
+  --bg-elevated-2: #1d212c;
+  --border: #2a2f3c;
+  --border-bright: #3a4152;
+  --text: #e6e9f0;
+  --text-dim: #9aa1b4;
+  --text-faint: #656d82;
+  --accent: #33e0c9;
+  --accent-dim: #1f7a6c;
+  --accent-glow: rgba(51, 224, 201, 0.35);
+  --danger: #ff6b6b;
+  --danger-bg: rgba(255, 107, 107, 0.08);
+  --radius: 10px;
+  --font-heading: "Chakra Petch", system-ui, sans-serif;
+  --font-body: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
 
 * {
   box-sizing: border-box;
@@ -6,44 +26,88 @@
 
 body {
   margin: 0;
-  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
-  color: #222;
-  background: #fafafa;
+  font-family: var(--font-body);
+  color: var(--text);
+  background:
+    radial-gradient(ellipse 900px 500px at 15% -10%, rgba(51, 224, 201, 0.07), transparent),
+    var(--bg);
+  min-height: 100vh;
 }
 
 header {
-  padding: 1rem 1.5rem 0;
-  border-bottom: 1px solid #ddd;
-  background: #fff;
+  padding: 1.25rem 2rem 0;
+  border-bottom: 1px solid var(--border);
+  background: rgba(13, 15, 20, 0.85);
+  backdrop-filter: blur(8px);
+  position: sticky;
+  top: 0;
+  z-index: 10;
 }
 
 header h1 {
-  margin: 0 0 0.75rem;
-  font-size: 1.4rem;
+  margin: 0 0 1rem;
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 1.3rem;
+  letter-spacing: 0.02em;
+  color: var(--text);
+}
+
+header h1::before {
+  content: "▸ ";
+  color: var(--accent);
 }
 
 .tabs {
   display: flex;
-  gap: 0.25rem;
+  gap: 1.75rem;
 }
 
 .tab-button {
-  padding: 0.5rem 1rem;
-  border: 1px solid #ddd;
-  border-bottom: none;
-  background: #f0f0f0;
+  position: relative;
+  padding: 0 0 0.85rem;
+  border: none;
+  background: none;
   cursor: pointer;
   font: inherit;
-  border-radius: 4px 4px 0 0;
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 0.82rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-faint);
+  transition: color 0.15s ease;
+}
+
+.tab-button::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -1px;
+  height: 2px;
+  border-radius: 2px;
+  background: transparent;
+  transition: background 0.15s ease, box-shadow 0.15s ease;
+}
+
+.tab-button:hover {
+  color: var(--text);
 }
 
 .tab-button.active {
-  background: #fff;
-  font-weight: 600;
+  color: var(--accent);
+}
+
+.tab-button.active::after {
+  background: var(--accent);
+  box-shadow: 0 0 10px var(--accent-glow);
 }
 
 main {
-  padding: 1.5rem;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .tab-panel {
@@ -56,60 +120,98 @@ main {
 
 .card-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-  gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1.1rem;
 }
 
 .card {
-  border: 1px solid #ddd;
-  border-radius: 6px;
-  padding: 0.75rem 1rem;
-  background: #fff;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.1rem 1.3rem;
+  transition: transform 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  border-color: var(--accent-dim);
+  box-shadow: 0 12px 28px -12px rgba(0, 0, 0, 0.6), 0 0 0 1px var(--accent-dim) inset;
 }
 
 .card h3 {
-  margin: 0 0 0.4rem;
+  margin: 0 0 0.5rem;
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 1.05rem;
+  color: var(--text);
 }
 
 .card p {
-  margin: 0.3rem 0;
-  font-size: 0.9rem;
+  margin: 0.4rem 0;
+  font-size: 0.87rem;
+  line-height: 1.5;
+  color: var(--text-dim);
 }
 
 .card-meta {
-  color: #555;
+  font-family: var(--font-heading);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--accent);
 }
 
 .card-summary {
-  color: #333;
+  color: var(--text);
 }
 
 .loading-state,
 .error-state,
 .empty-state {
-  color: #666;
-  font-style: italic;
+  display: inline-block;
+  font-family: var(--font-heading);
+  font-size: 0.82rem;
+  letter-spacing: 0.02em;
+  padding: 0.8rem 1.1rem;
+  border-radius: var(--radius);
+  border: 1px dashed var(--border-bright);
+  color: var(--text-dim);
+}
+
+.loading-state::before,
+.empty-state::before {
+  content: "◆ ";
+  color: var(--accent);
 }
 
 .error-state {
-  color: #a33;
+  color: var(--danger);
+  border: 1px solid rgba(255, 107, 107, 0.35);
+  background: var(--danger-bg);
+}
+
+.error-state::before {
+  content: "⚠ ";
 }
 
 /* Tattoos tab */
 
 .tattoo-layout {
   display: flex;
-  gap: 1rem;
-  margin-bottom: 1.5rem;
+  gap: 1.1rem;
+  margin-bottom: 1.75rem;
 }
 
 .tattoo-scene {
   flex: 2;
   min-height: 480px;
-  border: 1px solid #ddd;
-  border-radius: 6px;
-  background: #eef0f2;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--bg-elevated);
+  box-shadow: inset 0 0 60px rgba(0, 0, 0, 0.4);
   position: relative;
+  overflow: hidden;
 }
 
 .tattoo-scene canvas {
@@ -120,20 +222,40 @@ main {
 
 .tattoo-detail {
   flex: 1;
-  min-width: 220px;
-  border: 1px solid #ddd;
-  border-radius: 6px;
-  padding: 1rem;
-  background: #fff;
+  min-width: 240px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.25rem;
+  background: var(--bg-elevated);
+}
+
+.tattoo-detail h3 {
+  margin: 0 0 0.6rem;
+  font-family: var(--font-heading);
+  font-weight: 600;
+  color: var(--accent);
+}
+
+.tattoo-detail p {
+  font-size: 0.87rem;
+  line-height: 1.55;
+  color: var(--text-dim);
+  margin: 0.4rem 0;
+}
+
+.tattoo-detail a {
+  color: var(--accent);
 }
 
 .tattoo-detail img {
   max-width: 100%;
-  border-radius: 4px;
-  margin-bottom: 0.5rem;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  margin-bottom: 0.6rem;
 }
 
 .tattoo-detail-placeholder {
-  color: #888;
-  font-style: italic;
+  color: var(--text-faint);
+  font-family: var(--font-heading);
+  font-size: 0.85rem;
 }
