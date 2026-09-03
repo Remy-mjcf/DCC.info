@@ -4,41 +4,125 @@
   "title": "Tattoo",
   "type": "object",
   "properties": {
-    "id": { "type": "string" },
-    "name": { "type": "string" },
-    "crawler_id": { "type": "string" },
+    "id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "name": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "crawler_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
     "acquired": {
       "type": "object",
       "properties": {
-        "book_id": { "type": "string" },
-        "chapter": { "type": "integer", "minimum": 1 },
-        "scenario": { "type": "string" }
+        "book_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "chapter": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 1
+        },
+        "scenario": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
       },
-      "required": ["book_id", "chapter", "scenario"],
+      "required": [
+        "book_id",
+        "chapter",
+        "scenario"
+      ],
       "additionalProperties": false
     },
     "placement": {
       "type": "object",
       "properties": {
-        "body_part": { "type": "string" },
+        "body_part": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
         "position_3d": {
           "type": "object",
           "properties": {
-            "x": { "type": "number" },
-            "y": { "type": "number" },
-            "z": { "type": "number" }
+            "x": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "y": {
+              "type": [
+                "number",
+                "null"
+              ]
+            },
+            "z": {
+              "type": [
+                "number",
+                "null"
+              ]
+            }
           },
-          "required": ["x", "y", "z"],
+          "required": [
+            "x",
+            "y",
+            "z"
+          ],
           "additionalProperties": false
         },
-        "side": { "type": "string" }
+        "side": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
       },
-      "required": ["body_part", "position_3d", "side"],
+      "required": [
+        "body_part",
+        "position_3d",
+        "side"
+      ],
       "additionalProperties": false
     },
-    "effect": { "type": "string" },
-    "image": { "type": "string" },
-    "source_url": { "type": "string", "format": "uri" }
+    "effect": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "image": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "source_url": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "uri"
+    }
   },
   "required": [
     "id",

@@ -4,25 +4,74 @@
   "title": "Crawler",
   "type": "object",
   "properties": {
-    "id": { "type": "string" },
-    "name": { "type": "string" },
-    "class": { "type": "string" },
-    "species": { "type": "string" },
-    "status": { "type": "string" },
+    "id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "name": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "class": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "species": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "status": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
     "first_appearance": {
       "type": "object",
       "properties": {
-        "book_id": { "type": "string" },
-        "chapter": { "type": "integer", "minimum": 1 }
+        "book_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "chapter": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 1
+        }
       },
-      "required": ["book_id", "chapter"],
+      "required": [
+        "book_id",
+        "chapter"
+      ],
       "additionalProperties": false
     },
     "affiliations": {
-      "type": "array",
-      "items": { "type": "string" }
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": "string"
+      }
     },
-    "summary": { "type": "string" }
+    "summary": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
   },
   "required": [
     "id",

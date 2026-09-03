@@ -4,24 +4,68 @@
   "title": "NPC",
   "type": "object",
   "properties": {
-    "id": { "type": "string" },
-    "name": { "type": "string" },
-    "role": { "type": "string" },
-    "species": { "type": "string" },
+    "id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "name": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "role": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "species": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
     "first_appearance": {
       "type": "object",
       "properties": {
-        "book_id": { "type": "string" },
-        "chapter": { "type": "integer", "minimum": 1 }
+        "book_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "chapter": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 1
+        }
       },
-      "required": ["book_id", "chapter"],
+      "required": [
+        "book_id",
+        "chapter"
+      ],
       "additionalProperties": false
     },
     "related_crawlers": {
-      "type": "array",
-      "items": { "type": "string" }
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": "string"
+      }
     },
-    "summary": { "type": "string" }
+    "summary": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
   },
   "required": [
     "id",

@@ -4,20 +4,31 @@ Reads cached wikitext for a given entity type (crawler, npc, tattoo),
 extracts structured fields via a forced Claude tool call against the
 matching DCCschema/*.schema.json contract, and routes each result:
 
-  - passes full schema validation -> merged into DCCdata/<entity>.json
-  - fails validation               -> written to needs_review/<dir>/<title>.json
+  - passes schema validation AND has <=2 null required fields
+        -> merged into DCCdata/<entity>.json
+  - fails schema validation OR has >2 null required fields
+        -> written to needs_review/<dir>/<title>.json, with the schema
+           errors and null-field count attached for manual triage
 
-Some fields are never asked of the model and are injected by the
-pipeline instead:
+The model is explicitly told not to guess: if a field's value isn't in
+the article, it must set it to null rather than infer a plausible one.
+DCCschema/*.schema.json permit null on every leaf field for exactly
+this reason (structural container fields like `first_appearance` or
+`placement` stay required, non-null objects -- only their scalar/array
+leaves are nullable), so a handful of unknowns can still land directly
+in DCCdata for later hand-correction rather than always being deferred
+to needs_review.
+
+Tattoos are the intentional exception in practice: `placement.
+position_3d` has three required leaves (x, y, z) that can never be
+determined from wiki text, which alone puts most tattoo extractions
+over the >2-null threshold -- so they naturally keep landing in
+needs_review/ until a human adds the art asset and 3D coordinates.
+
+Some fields are never asked of the model at all, because the pipeline
+computes them directly and any model guess would just be discarded:
   - id: crawler/npc get slug(title); tattoos get a sequential tattoo_NNN
   - tattoo.source_url: derived directly from the wiki page title
-
-Tattoos also omit `image` and `placement.position_3d` from the model's
-tool schema entirely, since neither can be determined from wiki text.
-Every tattoo extraction therefore fails schema validation and lands in
-needs_review/ until a human adds the art asset and 3D coordinates and
-promotes it into DCCdata/tattoos.json by hand -- this is intentional,
-not a bug.
 
 Usage:
     python extract.py crawler
@@ -44,6 +55,7 @@ NEEDS_REVIEW_ROOT = Path(__file__).parent / "needs_review"
 
 WIKI_BASE_URL = "https://dungeon-crawler-carl.fandom.com/wiki"
 DEFAULT_MODEL = "claude-sonnet-5"
+MAX_NULL_REQUIRED_FIELDS = 2
 
 ENTITY_CONFIG = {
     "crawler": {
@@ -77,7 +89,7 @@ ENTITY_CONFIG = {
         "schema_file": "tattoo.schema.json",
         "cache_dir": "Tattoos",
         "data_file": "tattoos.json",
-        "omit_fields": ["image", "placement.position_3d", "source_url"],
+        "omit_fields": ["source_url"],
         "instructions": (
             "This article is about a tattoo (a mark or ability grant a crawler "
             "can receive). Extract: name; crawler_id (give the NAME, as it "
@@ -142,13 +154,46 @@ def omit_field(schema: dict, dotted_path: str) -> None:
         node["required"].remove(leaf)
 
 
+def make_nullable(node: dict) -> None:
+    """Recursively allow null on every leaf field. Object containers (e.g.
+    first_appearance, placement) stay required, non-null structure -- only
+    their scalar/array leaves become nullable."""
+    if node.get("type") == "object" and "properties" in node:
+        for prop_schema in node["properties"].values():
+            make_nullable(prop_schema)
+        return
+    node_type = node.get("type")
+    if node_type is None or node_type == "null":
+        return
+    if isinstance(node_type, list):
+        if "null" not in node_type:
+            node["type"] = [*node_type, "null"]
+    else:
+        node["type"] = [node_type, "null"]
+
+
 def build_extraction_schema(schema: dict, omit_fields: list[str]) -> dict:
     extraction_schema = copy.deepcopy(schema)
     for key in ("$schema", "$id", "title"):
         extraction_schema.pop(key, None)
     for path in ["id", *omit_fields]:
         omit_field(extraction_schema, path)
+    for prop_schema in extraction_schema["properties"].values():
+        make_nullable(prop_schema)
     return extraction_schema
+
+
+def count_null_required_fields(schema: dict, record: dict) -> int:
+    """Recursively counts required leaf fields that are missing or null."""
+    count = 0
+    for name in schema.get("required", []):
+        prop_schema = schema["properties"].get(name, {})
+        value = record.get(name) if isinstance(record, dict) else None
+        if prop_schema.get("type") == "object" and "properties" in prop_schema:
+            count += count_null_required_fields(prop_schema, value or {})
+        elif value is None:
+            count += 1
+    return count
 
 
 def load_books() -> list[dict]:
@@ -168,8 +213,10 @@ def build_system_prompt(entity_type: str, books: list[dict]) -> str:
         "wikitext of a single article. Call the record_extraction tool exactly "
         "once with the extracted fields. Only use information explicitly "
         "stated or very clearly implied by the article -- never invent facts. "
-        "Strip wiki markup (double brackets, templates) from extracted text so "
-        "it reads as clean prose/names.\n\n"
+        "If a field's value cannot be determined from the article text, set "
+        "it to null -- do not guess or infer a plausible-sounding value just "
+        "to fill the field in. Strip wiki markup (double brackets, templates) "
+        "from extracted text so it reads as clean prose/names.\n\n"
         f"The books in the series, in order, are: {books_summary}. Where the "
         "article gives a value like \"Book 1, Chapter 2\", match the book "
         "number to the corresponding id from this list and extract the "
@@ -201,7 +248,7 @@ def inject_fields(entity_type: str, title: str, extracted: dict, existing_ids: s
     if entity_type == "tattoo":
         extracted["id"] = next_tattoo_id(existing_ids)
         extracted["source_url"] = f"{WIKI_BASE_URL}/{quote(title.replace(' ', '_'))}"
-        if "crawler_id" in extracted:
+        if extracted.get("crawler_id"):
             extracted["crawler_id"] = slugify(extracted["crawler_id"])
     else:
         extracted["id"] = unique_slug(slugify(title), existing_ids)
@@ -262,11 +309,16 @@ def process_entity(client: Anthropic, model: str, entity_type: str, force: bool,
 
     print(f"Extracting {entity_type}: {len(wikitext_files)} cached page(s)")
 
+    succeeded = 0
+    flagged = 0
+    skipped = 0
+
     for wikitext_file in wikitext_files:
         title = wikitext_file.stem
         marker = wikitext_file.with_suffix(".extracted")
         if marker.exists() and not force:
             print(f"  skip (already extracted): {title}")
+            skipped += 1
             continue
 
         raw_wikitext = wikitext_file.read_text(encoding="utf-8")
@@ -276,24 +328,33 @@ def process_entity(client: Anthropic, model: str, entity_type: str, force: bool,
         extracted = inject_fields(entity_type, title, extracted, existing_ids)
 
         errors = validate(schema, extracted)
-        if not errors:
+        null_count = count_null_required_fields(schema, extracted)
+
+        if not errors and null_count <= MAX_NULL_REQUIRED_FIELDS:
             if extracted["id"] in existing_ids:
                 print(f"  skip (id already in {config['data_file']}): {title}")
+                skipped += 1
             else:
                 data.append(extracted)
                 existing_ids.add(extracted["id"])
                 write_json(data_path, data)
                 print(f"  extracted -> {config['data_file']}: {title}")
+                succeeded += 1
         else:
             write_json(review_dir / f"{title}.json", {
                 "source_title": title,
                 "cache_file": str(wikitext_file.relative_to(CACHE_ROOT.parent)),
                 "extracted": extracted,
-                "validation_errors": errors,
+                "null_field_count": null_count,
+                "schema_errors": errors,
             })
-            print(f"  needs review ({len(errors)} error(s)): {title}")
+            print(f"  needs review ({len(errors)} schema error(s), {null_count} null field(s)): {title}")
+            flagged += 1
 
         marker.touch()
+
+    print(f"\nDone: {succeeded} succeeded, {flagged} flagged for review"
+          + (f", {skipped} skipped (already processed)" if skipped else ""))
 
 
 def main():
