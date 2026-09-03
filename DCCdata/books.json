@@ -1,0 +1,5 @@
+[
+  { "id": "b1", "title": "Dungeon Crawler Carl", "order": 1 },
+  { "id": "b2", "title": "Carl's Doomsday Scenario", "order": 2 },
+  { "id": "b3", "title": "The Dungeon Anarchist's Cookbook", "order": 3 }
+]
