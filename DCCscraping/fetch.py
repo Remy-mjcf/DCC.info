@@ -91,12 +91,14 @@ class MediaWikiClient:
 
 
 def fetch_category(client: MediaWikiClient, category: str, cache_dir_name: str | None = None,
-                    force: bool = False, limit: int | None = None) -> None:
+                    force: bool = False, limit: int | None = None, title_filter: str | None = None) -> None:
     cache_dir_name = cache_dir_name or CATEGORY_CACHE_DIRS.get(category, category)
     cache_dir = CACHE_ROOT / cache_dir_name
     cache_dir.mkdir(parents=True, exist_ok=True)
 
     titles = client.get_category_members(category)
+    if title_filter:
+        titles = [t for t in titles if title_filter in t]
     if limit:
         titles = titles[:limit]
 
@@ -123,12 +125,15 @@ def main():
     parser.add_argument("--cache-dir", help="Override the local cache subdirectory name")
     parser.add_argument("--force", action="store_true", help="Re-fetch pages even if already cached")
     parser.add_argument("--limit", type=int, help="Only fetch the first N pages (for testing)")
+    parser.add_argument("--title-filter", help="Only fetch pages whose title contains this substring "
+                                                "(e.g. a category mixing book pages with unrelated ones)")
     parser.add_argument("--rate-limit", type=float, default=DEFAULT_RATE_LIMIT_SECONDS,
                          help="Minimum seconds between requests (default: %(default)s)")
     args = parser.parse_args()
 
     client = MediaWikiClient(rate_limit_seconds=args.rate_limit)
-    fetch_category(client, args.category, cache_dir_name=args.cache_dir, force=args.force, limit=args.limit)
+    fetch_category(client, args.category, cache_dir_name=args.cache_dir, force=args.force, limit=args.limit,
+                    title_filter=args.title_filter)
 
 
 if __name__ == "__main__":

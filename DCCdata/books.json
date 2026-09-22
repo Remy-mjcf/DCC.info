@@ -1,5 +1,42 @@
 [
-  { "id": "b1", "title": "Dungeon Crawler Carl", "order": 1 },
-  { "id": "b2", "title": "Carl's Doomsday Scenario", "order": 2 },
-  { "id": "b3", "title": "The Dungeon Anarchist's Cookbook", "order": 3 }
+  {
+    "id": "b1",
+    "title": "Dungeon Crawler Carl",
+    "order": 1
+  },
+  {
+    "id": "b2",
+    "title": "Carl's Doomsday Scenario",
+    "order": 2
+  },
+  {
+    "id": "b3",
+    "title": "The Dungeon Anarchist's Cookbook",
+    "order": 3
+  },
+  {
+    "title": "A Parade of Horribles",
+    "order": 8,
+    "id": "b8"
+  },
+  {
+    "title": "The Butcher's Masquerade",
+    "order": 5,
+    "id": "b5"
+  },
+  {
+    "title": "The Eye of the Bedlam Bride",
+    "order": 6,
+    "id": "b6"
+  },
+  {
+    "title": "The Gate of the Feral Gods",
+    "order": 4,
+    "id": "b4"
+  },
+  {
+    "title": "This Inevitable Ruin",
+    "order": 7,
+    "id": "b7"
+  }
 ]

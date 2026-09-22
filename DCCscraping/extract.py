@@ -136,6 +136,20 @@ ENTITY_CONFIG = {
             "text); and a 2-3 sentence summary in your own words."
         ),
     },
+    "book": {
+        "schema_file": "book.schema.json",
+        "cache_dir": "Books",
+        "data_file": "books.json",
+        "omit_fields": [],
+        "instructions": (
+            "This article is about one of the novels in the Dungeon Crawler "
+            "Carl book series. Extract: title (the book's official title, "
+            "exactly as given, without the trailing \"(Book)\" disambiguator); "
+            "and order (the book's numbered position in the series, as an "
+            "integer -- e.g. if the article calls it \"the fourth "
+            "installment\", extract 4)."
+        ),
+    },
 }
 
 
@@ -313,6 +327,8 @@ def inject_fields(entity_type: str, title: str, extracted: dict, existing_ids: s
         extracted["id"] = next_tattoo_id(existing_ids)
         if extracted.get("crawler_id"):
             extracted["crawler_id"] = slugify(extracted["crawler_id"])
+    elif entity_type == "book" and isinstance(extracted.get("order"), int):
+        extracted["id"] = f"b{extracted['order']}"
     else:
         extracted["id"] = unique_slug(slugify(title), existing_ids)
     if entity_type in SOURCE_URL_ENTITIES:
