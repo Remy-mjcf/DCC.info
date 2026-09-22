@@ -231,5 +231,1248 @@
     ],
     "summary": "Scolopendra is a colossal centipede monster and the legendary Level 500 Dungeon Boss of the World Dungeon's volcano. Summoned far ahead of schedule in the Eleventh Floor arena by Carl, she is accidentally transformed into a Level 1 Crawler named Sexy Scolopendra instead of being killed, and she automatically joins Princess Donut's party.",
     "id": "scolopendra"
+  },
+  {
+    "name": "Ajib",
+    "class": "Prodromoi Class",
+    "species": "Human",
+    "status": "Unknown",
+    "first_appearance": {
+      "book_id": "b5",
+      "chapter": 1
+    },
+    "affiliations": [],
+    "summary": "Ajib is a human crawler from Earth who is presumably a dexterity-themed fighter. He lost the bottom half of his left leg while jumping through the Gate of the Feral Gods on the fifth floor.",
+    "id": "ajib"
+  },
+  {
+    "name": "Allister",
+    "class": null,
+    "species": null,
+    "status": "Unknown",
+    "first_appearance": {
+      "book_id": "b3",
+      "chapter": 13
+    },
+    "affiliations": [
+      "Former Crawlers",
+      "Anarchists"
+    ],
+    "summary": "Allister is a former crawler and the author of the 13th edition of the Dungeon Anarchist's Cookbook. His entries took the form of T'Ghee cards, reflecting his meditation-based religion. He contributed various notes and advice to the cookbook throughout multiple levels of the dungeon.",
+    "id": "allister"
+  },
+  {
+    "name": "Anton Lopez",
+    "class": "Fugitive Class",
+    "species": "Human",
+    "status": "Deceased, killed by Ogun",
+    "first_appearance": {
+      "book_id": "b6",
+      "chapter": 5
+    },
+    "affiliations": [
+      "Royal Court of Princess Donut"
+    ],
+    "summary": "Anton Lopez was a human crawler from Cuba who previously worked as a prison guard. He navigated the dungeon alongside his cousin Paz Lo and Sister Ines, eventually allying briefly with Carl and Donut on the eighth floor. He was ultimately killed by his patron god, Ogun, after being marked for a smite during a shrine-related trial.",
+    "id": "anton_lopez"
+  },
+  {
+    "name": "Armita",
+    "class": null,
+    "species": "Human (non Earth)",
+    "status": "Dead",
+    "first_appearance": {
+      "book_id": "b3",
+      "chapter": null
+    },
+    "affiliations": [
+      "Odette"
+    ],
+    "summary": "Armita was a former crawler and human from outside Earth who became a demigod attendant on the twelfth floor. She acted as a liaison in Odette's party before being killed by Huanxin Jinx after a bribery deal fell apart.",
+    "id": "armita"
+  },
+  {
+    "name": "Azin",
+    "class": null,
+    "species": "Unknown",
+    "status": "Unknown",
+    "first_appearance": {
+      "book_id": "b3",
+      "chapter": 26
+    },
+    "affiliations": [],
+    "summary": "Azin is a former crawler and the author of the 17th edition of the Dungeon Anarchist's Cookbook. During their time in the dungeon, their party included at least two other crawlers and faced challenges such as permanent blindness debuffs from gods.",
+    "id": "azin"
+  },
+  {
+    "name": "Batbilge",
+    "class": null,
+    "species": "Unknown",
+    "status": "Unknown",
+    "first_appearance": {
+      "book_id": "b4",
+      "chapter": 3
+    },
+    "affiliations": null,
+    "summary": "Batbilge is a former crawler and the author of the 12th edition of the Dungeon Anarchist's Cookbook. They left a warning note in their final entry regarding the marketplace interface valuing a tome as a unique, heirloom item worth 50 million gold.",
+    "id": "batbilge"
+  },
+  {
+    "name": "Bobby D.J.",
+    "class": "Spy Class",
+    "species": "Human",
+    "status": "Deceased",
+    "first_appearance": {
+      "book_id": "b4",
+      "chapter": 6
+    },
+    "affiliations": [
+      "Desperado Club"
+    ],
+    "summary": "Bobby D.J. was a human crawler from Earth who belonged to the Spy Class and the Desperado Club. Serving as the primary trap-finder for his party on the fifth floor, he suffered severe psychological trauma as he watched his teammates repeatedly die to traps around him. He ultimately met his end when he was crushed and killed after the Where the Red God Glows Quest triggered.",
+    "id": "bobby"
+  },
+  {
+    "name": "Bodi",
+    "class": "Big Game Spear Hunter Class",
+    "species": "Human",
+    "status": "Alive",
+    "first_appearance": {
+      "book_id": null,
+      "chapter": 15
+    },
+    "affiliations": [
+      "Princess Posse",
+      "103rd Battalion of the Princess Posse"
+    ],
+    "summary": "Bodi is a former crawler and a tall, tan-skinned human who leads the 103rd Battalion of the Princess Posse during the Faction Wars. Famous from his time outside the dungeon, he is a skilled spear hunter who aids Carl and his allies in battles and strategic maneuvers. Later, he proves to be an exceptional driver during vehicle-based challenges and combat.",
+    "id": "bodi"
+  },
+  {
+    "name": "Bogdon Ro",
+    "class": "Legatus Class",
+    "species": "Human",
+    "status": "Deceased",
+    "first_appearance": {
+      "book_id": null,
+      "chapter": 4
+    },
+    "affiliations": [
+      "SOS"
+    ],
+    "summary": "Bogdon Ro was an Earth crawler who frequently appeared on or near the top 10 list and collected numerous player killer skulls. He reached level 44 before ultimately being killed by a hunter on the sixth floor of the dungeon.",
+    "id": "bogdon_ro"
+  },
+  {
+    "name": "Brandon Andrews",
+    "class": null,
+    "species": "Human",
+    "status": "Deceased",
+    "first_appearance": {
+      "book_id": "b1",
+      "chapter": 22
+    },
+    "affiliations": [
+      "Meadow Lark",
+      "Meadow Lark Elder Care Facility"
+    ],
+    "summary": "Brandon Andrews was a maintenance worker and crawler from Wenatchee, Washington, who entered the Dungeon alongside his brother Chris to protect the elderly residents of the Meadow Lark facility. Mechanically minded and cheerful, he served as a core protector and planner for his ward group across the first three floors before tragically sacrificing himself to save others. His final moments were spent holding the line against shade gremlins on the third floor, leaving behind a legacy of devotion to his people and love for his brother.",
+    "id": "brandon_andrews"
+  },
+  {
+    "name": "Britney Proskurina",
+    "class": "Pit Champion",
+    "species": "Human",
+    "status": "Alive",
+    "first_appearance": {
+      "book_id": "b4",
+      "chapter": 25
+    },
+    "affiliations": [
+      "Vadim's party",
+      "Team Katia",
+      "Louis's party",
+      "Safehome Yolanda",
+      "Princess Posse"
+    ],
+    "summary": "Britney Proskurina is a human crawler from Ukraine who survived the water quadrant of the fifth floor. She is a skilled combatant and musician who travels alongside Carl, Donut, and various allied groups through the dungeon. Over the floors, she gains significant levels, acquires notable combat skills, and endures a severe facial burn during the Butcher's Masquerade.",
+    "id": "britney"
+  },
+  {
+    "name": "Carl",
+    "class": "Agent Provocateur Class",
+    "species": "Human / Primal",
+    "status": "Alive",
+    "first_appearance": {
+      "book_id": "b1",
+      "chapter": 1
+    },
+    "affiliations": [
+      "Royal Court of Princess Donut",
+      "Safehome Yolanda",
+      "Desperado Club",
+      "Naughty Boys Employment Agency",
+      "Guild of Suffering",
+      "Club Vanquisher"
+    ],
+    "summary": "Carl is the titular protagonist of Dungeon Crawler Carl and a former U.S. Coast Guard veteran who enters the alien Dungeon alongside his ex-girlfriend's cat, Princess Donut. Equipped with a gritty determination, a knack for explosives, and a unique Compensated Anarchist and Agent Provocateur class build, he becomes one of the most famous and resourceful crawlers on the Syndicate gameshow. Despite the brutal conditions of the Dungeon, Carl remains deeply empathetic and fiercely protective of his fellow survivors.",
+    "id": "carl"
+  },
+  {
+    "name": "Chaco",
+    "class": "Song Bard",
+    "species": "Pterolykos",
+    "status": "Alive",
+    "first_appearance": {
+      "book_id": "b3",
+      "chapter": 7
+    },
+    "affiliations": [
+      "Syndicate"
+    ],
+    "summary": "Chaco is an alien NPC, former crawler, and the host of the Prize Carousel who shares a violent and tragic history with Mordecai. Forced to betray his former party years ago under pressure from Odette, he lives with intense guilt and fear as he finishes out his final season working for the dungeon production.",
+    "id": "chaco"
+  },
+  {
+    "name": "Chirag Ali",
+    "class": "Sacred Paladin Class",
+    "species": "Human",
+    "status": "Unknown",
+    "first_appearance": {
+      "book_id": null,
+      "chapter": 17
+    },
+    "affiliations": [],
+    "summary": "Chirag Ali is a human crawler who attained level 35 with the Sacred Paladin Class. They made a brief appearance in the 10th spot on the Leaderboard during the middle of the fifth floor.",
+    "id": "chirag_ali"
+  },
+  {
+    "name": "Chris Andrews",
+    "class": "Zulu Warrior Class",
+    "species": "Human",
+    "status": "Alive",
+    "first_appearance": {
+      "book_id": "b1",
+      "chapter": 22
+    },
+    "affiliations": [
+      "Meadow Lark",
+      "Team Li Na",
+      "Safehome Yolanda",
+      "Desperado Club",
+      "Dungeon Book of the Floor Club",
+      "Princess Posse"
+    ],
+    "summary": "Chris Andrews is a human crawler and former maintenance worker from Wenatchee, Washington, who entered the dungeon alongside his brother Brandon and their elderly nursing home wards. Though initially a quiet and empathetic member of the Meadow Lark party, he was secretly possessed by the infiltrator crawler Maggie My at the end of the third floor, causing him to act aggressively until Maggie was forcibly removed on the fifth floor. Following his brother's death and a period of grieving, Chris eventually fought in the Faction Wars and sought an exit from the dungeon.",
+    "id": "chris_andrews"
+  },
+  {
+    "name": "Cleiton",
+    "class": null,
+    "species": "Human",
+    "status": "Deceased",
+    "first_appearance": {
+      "book_id": null,
+      "chapter": 72
+    },
+    "affiliations": [
+      "Flamengo"
+    ],
+    "summary": "Cleiton was a human crawler from Earth and a member of Team Flamengo who participated in the Dungeon. He attended the Butcher's Masquerade on the sixth floor where he awkwardly performed knock-knock jokes during the talent competition. He was ultimately killed in the final battle against the remaining hunters.",
+    "id": "cleiton"
+  },
+  {
+    "name": "Conrad E",
+    "class": "Ranger",
+    "species": "Human",
+    "status": "Deceased",
+    "first_appearance": {
+      "book_id": "b2",
+      "chapter": 25
+    },
+    "affiliations": [],
+    "summary": "Conrad E was a human crawler from Russia who participated in the Dungeon as a level 12 Ranger. He perished during the frantic dash to escape the Third Floor before its collapse, dying instantly when struck by a level pulse just outside the town.",
+    "id": "conrad_e"
+  },
+  {
+    "name": "Dante",
+    "class": "Thief Class",
+    "species": "Crocodilian",
+    "status": "Dead",
+    "first_appearance": {
+      "book_id": null,
+      "chapter": null
+    },
+    "affiliations": [
+      "Trap Master Guild"
+    ],
+    "summary": "Dante was a former crocodilian crawler and the author of the third edition of the Dungeon Anarchist's Cookbook. He eventually took an exit deal to work as a game guide and guildhall instructor before being killed by administrative action.",
+    "id": "dante"
+  },
+  {
+    "name": "Dmitri Popov",
+    "class": "Visionary (specialization), Illusionist (base)",
+    "species": "Nodling Yearling",
+    "status": "Alive (Expelled from the Dungeon)",
+    "first_appearance": {
+      "book_id": "b5",
+      "chapter": 8
+    },
+    "affiliations": [
+      "Maxim Popov"
+    ],
+    "summary": "Dmitri Popov was a Bulgarian crawler who entered the dungeon alongside his twin brother Maxim, sharing a single two-headed Nodling body and ranking among the Top 10. He acted as the magic-using half of the duo with his Visionary class and was known for his cheerful personality and love for cats. After being fatally gored during the Butcher's Masquerade on the sixth floor, their racial mechanic triggered and split them into separate baby ogres, allowing them to be successfully expelled from the dungeon alive.",
+    "id": "dmitri_popov"
+  },
+  {
+    "name": "Donita Grace",
+    "class": null,
+    "species": "Human",
+    "status": "Deceased",
+    "first_appearance": {
+      "book_id": "b3",
+      "chapter": 14
+    },
+    "affiliations": [],
+    "summary": "Donita Grace was a human crawler from Earth whom Carl added to his chat in the Desperado Club on the fourth floor. She later sent a panicked warning message about the Krakaren Crotch Dumplings at Station 24 before dying and becoming Krakaren spawn.",
+    "id": "donita_grace"
+  },
+  {
+    "name": "Princess Donut",
+    "class": "Assassin of Sekhmet",
+    "species": "Persian Cat",
+    "status": "Alive",
+    "first_appearance": {
+      "book_id": "b1",
+      "chapter": 1
+    },
+    "affiliations": [
+      "Royal Court of Princess Donut",
+      "Safehome Yolanda",
+      "Desperado Club",
+      "Blood Sultanate"
+    ],
+    "summary": "Princess Donut is a pedigreed, award-winning Persian show cat who transforms into a talking, sapient crawler after entering the Dungeon with Carl. She serves as the party leader of the Royal Court of Princess Donut and relies heavily on charisma and spells rather than physical combat. Vain, protective, and fond of the spotlight, she is also the adoptive mother of the velociraptor Mongo.",
+    "id": "donut"
+  },
+  {
+    "name": "Drakea",
+    "class": "Similar to Guerilla Class, but more magic",
+    "species": "Bune",
+    "status": "Deceased",
+    "first_appearance": {
+      "book_id": "b3",
+      "chapter": null
+    },
+    "affiliations": null,
+    "summary": "Drakea was a former crawler and the prolific author of the 22nd edition of the Dungeon Anarchist's Cookbook. Belonging to the Bune species, he specialized in rogue and magic classes focused on building elaborate traps and magical items. He was eventually killed on the eleventh or twelfth floor when one of his traps unnaturally backfired due to rule-breaking by the naga producers.",
+    "id": "drakea"
+  },
+  {
+    "name": "Drick",
+    "class": null,
+    "species": "Iguanoid / Moon Elf / Gondii",
+    "status": "Dead",
+    "first_appearance": {
+      "book_id": null,
+      "chapter": 33
+    },
+    "affiliations": [
+      "The Dream",
+      "Valtay Corporation"
+    ],
+    "summary": "Drick is a former crawler and member of The Dream who now works with the Valtay Corporation while hosting a Gondii worm in his brain. He is an old, heavily scarred, and muscular individual who was eventually killed after being stabbed in the back at a way station bar. He was also considered as an option for an adjutant by Carl and Donut.",
+    "id": "drick"
+  },
+  {
+    "name": "Emir Akbas",
+    "class": "Ghazi",
+    "species": "Zebani",
+    "status": "Unknown",
+    "first_appearance": {
+      "book_id": "b3",
+      "chapter": 32
+    },
+    "affiliations": [
+      "Burcu",
+      "Zeynep",
+      "Tuba",
+      "Selvi"
+    ],
+    "summary": "Emir Akbas is an Earth Crawler and Zebani met by Carl in the Desperado Club on the eighth floor. He is in his 50s, travels with a squad that includes Zeynep, and possesses a very powerful punch. During an encounter, a drunken Emir fights Carl before his team pulls him away.",
+    "id": "emir_akbas"
+  },
+  {
+    "name": "Eva Sigrid",
+    "class": "Nimblefoot Enforcer Class",
+    "species": "Half Nagini, Half-Orc",
+    "status": "Deceased",
+    "first_appearance": {
+      "book_id": "b3",
+      "chapter": 20
+    },
+    "affiliations": [
+      "Brynhild's Daughters"
+    ],
+    "summary": "Eva Sigrid was a human crawler who became a member of Brynhild's Daughters and served as Hekla's right-hand woman. She was a prolific player killer who had a hostile relationship with her former pre-collapse friend Katia Grim. Eva was eventually killed by Katia at the end of the Butcher's Masquerade.",
+    "id": "eva"
+  },
+  {
+    "name": "Everly",
+    "class": "Explosives Engineer",
+    "species": "Mantis",
+    "status": "Deceased",
+    "first_appearance": {
+      "book_id": null,
+      "chapter": null
+    },
+    "affiliations": [
+      "Desperado Club"
+    ],
+    "summary": "Everly was a former crawler and author of the Dungeon Anarchist's Cookbook. She was a member of the Desperado Club whose team was ultimately betrayed and killed by a malicious gift from her sponsor on the eighth floor.",
+    "id": "everly"
+  },
+  {
+    "name": "Firas",
+    "class": "Hammersmith Class",
+    "species": "Human",
+    "status": "Deceased",
+    "first_appearance": {
+      "book_id": "b4",
+      "chapter": 1
+    },
+    "affiliations": [
+      "Royal Court of Princess Donut",
+      "SOS"
+    ],
+    "summary": "Firas was a human crawler with the Hammersmith Class who participated in the dungeon. He met Princess Donut's group on the fifth floor and was later killed by Queen Imogen's lightning spell on the sixth floor.",
+    "id": "firas"
+  },
+  {
+    "name": "Forkith",
+    "class": "Sapper Class",
+    "species": "Urgyle",
+    "status": "Alive",
+    "first_appearance": {
+      "book_id": "b3",
+      "chapter": 8
+    },
+    "affiliations": null,
+    "summary": "Forkith is an Urgyle former crawler and the author of the 20th Edition of the Dungeon Anarchist's Cookbook. He entered the Dungeon with his sister Barkith, who was tragically killed after a backpack bomb experiment failed. Forkith reached at least the eleventh floor and contributed extensive notes and warnings to the Cookbook.",
+    "id": "forkith"
+  },
+  {
+    "name": "Gideon",
+    "class": "some sort of tank",
+    "species": "Human",
+    "status": "Deceased",
+    "first_appearance": {
+      "book_id": null,
+      "chapter": 34
+    },
+    "affiliations": [
+      "SOS"
+    ],
+    "summary": "Gideon was a human crawler and tank who fought on the fourth floor and participated in the battle for the castle. He was severely allergic to dogs and was ultimately killed during the fighting in the Butcher's Masquerade.",
+    "id": "gideon"
+  },
+  {
+    "name": "Grace Bautista",
+    "class": null,
+    "species": "Human",
+    "status": "Deceased",
+    "first_appearance": {
+      "book_id": "b2",
+      "chapter": 6
+    },
+    "affiliations": [
+      "Bautista"
+    ],
+    "summary": "Grace Bautista was a human crawler and the sister of Daniel Bautista. She was killed by a Former Circus Lemur on the third floor of the dungeon. Her corpse was later discovered alongside her family members by Carl and Donut.",
+    "id": "grace_bautista_3"
+  },
+  {
+    "name": "Gracie",
+    "class": null,
+    "species": "Human",
+    "status": "Deceased",
+    "first_appearance": {
+      "book_id": "b1",
+      "chapter": 22
+    },
+    "affiliations": [
+      "Meadow Lark"
+    ],
+    "summary": "Dr. Gracie was a doctor and MMA fighter from Wenatchee, Washington, who entered the dungeon as part of the Meadow Lark party. After many members of her party were killed on the first floor, she and the remaining survivors were hunted down and killed by a mob.",
+    "id": "gracie"
+  },
+  {
+    "name": "Gwendolyn Duet",
+    "class": "Boring Ol' Fighter Class",
+    "species": "Human",
+    "status": "Deceased",
+    "first_appearance": {
+      "book_id": "b3",
+      "chapter": null
+    },
+    "affiliations": [
+      "Club Vanquisher"
+    ],
+    "summary": "Gwendolyn Duet was a human crawler of Canadian Inuit heritage and a member of Club Vanquisher. She fought using a spear and chainmail, and ultimately died during the Cage Fight Extreme on the sixth floor. Her first appearance was in Book 3, where she was seen defending Carl in the chat.",
+    "id": "gwendolyn_duet"
+  },
+  {
+    "name": "Hekla",
+    "class": "Shieldmaiden",
+    "species": "Human / Amazonian",
+    "status": "Deceased",
+    "first_appearance": {
+      "book_id": "b1",
+      "chapter": 20
+    },
+    "affiliations": [
+      "Brynhild's Daughters"
+    ],
+    "summary": "Hekla was a cunning and practical Earth crawler from Iceland who led the all-female party Brynhild's Daughters. Possessing powerful equipment like an enchanted repeating crossbow, she rose to the top ranks of the dungeon before being killed after her plot against Katia Grim was exposed.",
+    "id": "hekla"
+  },
+  {
+    "name": "Henry",
+    "class": null,
+    "species": "Human",
+    "status": "Deceased",
+    "first_appearance": {
+      "book_id": "b3",
+      "chapter": 1
+    },
+    "affiliations": [
+      "Meadow Lark"
+    ],
+    "summary": "Henry is a human resident of the Meadow Lark nursing home who reaches the Third Floor of the dungeon. He ultimately sacrifices himself alongside Brandon Andrews to hold off Shade Gremlins so that Team Meadow Lark can escape to the next floor.",
+    "id": "henry"
+  },
+  {
+    "name": "Herot",
+    "class": null,
+    "species": "Skink",
+    "status": "Alive",
+    "first_appearance": {
+      "book_id": "b3",
+      "chapter": 17
+    },
+    "affiliations": [
+      "Former Crawlers",
+      "Anarchists",
+      "Aliens"
+    ],
+    "summary": "Herot is a former crawler and author of the 16th edition of the Dungeon Anarchist's Cookbook. They are described as an annoying skink who wrote extensive essays on breaking the fourth wall for NPCs and analyzing various dungeon features like castles and stairwells. Herot observed that the system AI becomes more unstable and pliable on higher floors.",
+    "id": "herot"
+  },
+  {
+    "name": "Hoon",
+    "class": null,
+    "species": "Unknown",
+    "status": "Deceased",
+    "first_appearance": {
+      "book_id": "b4",
+      "chapter": null
+    },
+    "affiliations": [],
+    "summary": "Hoon was a crawler in a Valtay-produced season of Dungeon Crawler World who successfully completed eleven floors and secured a mech. When reaching the elevator to the twelfth floor, he was forced to choose between fighting his own children who were guarding it or ending his life, ultimately choosing to commit suicide rather than harm them. His tragic fate profoundly impacted viewers and led the Syndicate Council to institute new rules regarding the use of collected loved ones in the game.",
+    "id": "hoon"
+  },
+  {
+    "name": "Horton",
+    "class": null,
+    "species": "Human mushroom",
+    "status": "Deceased",
+    "first_appearance": {
+      "book_id": "b3",
+      "chapter": 27
+    },
+    "affiliations": [],
+    "summary": "Horton is a crawler who turned into a mushroom following the race selection process on the third floor. He participated in the Stairwell Fight on the Fourth Floor and later performed on the sixth floor during the Butcher's Masquerade, where he ultimately died during the fighting.",
+    "id": "horton"
+  },
+  {
+    "name": "Ifechi",
+    "class": "Physicker Class",
+    "species": "Human",
+    "status": "Deceased",
+    "first_appearance": {
+      "book_id": "b1",
+      "chapter": 44
+    },
+    "affiliations": [
+      "Red Cross",
+      "Le Mouvement"
+    ],
+    "summary": "Ifechi was a human crawler from Nigeria and a former Red Cross medic who entered the Dungeon with the group Le Mouvement. Partnering with Florin, she became a Top Ten crawler and wielded a unique magical staff that summoned buff-giving leeches. She was ultimately killed on the Fourth Floor while trying to protect Florin from Lucia Mar.",
+    "id": "ifechi"
+  },
+  {
+    "name": "Ikicha",
+    "class": null,
+    "species": "Yenk",
+    "status": "Unknown",
+    "first_appearance": {
+      "book_id": "b3",
+      "chapter": 13
+    },
+    "affiliations": [],
+    "summary": "Ikicha is a former crawler and a castrated male Yenk who authored entries in the 11th Edition of the Dungeon Anarchist's Cookbook. Throughout their time in the dungeon, they struggled with intense loneliness and the painful experience of encountering a loved one resurrected as a boss.",
+    "id": "ikicha"
+  },
+  {
+    "name": "Jack",
+    "class": null,
+    "species": "Human",
+    "status": "Deceased",
+    "first_appearance": {
+      "book_id": "b1",
+      "chapter": null
+    },
+    "affiliations": [
+      "Meadow Lark"
+    ],
+    "summary": "Jack was an elderly human crawler and former patient of the Meadow Lark Care Facility who navigated the dungeon with a walker. He was killed by Yolanda Martinez on the first floor after urinating on a dungeon wall, which inadvertently summoned a Rage Elemental.",
+    "id": "jack"
+  },
+  {
+    "name": "Ji-Hoon",
+    "class": "Knife Sharpener Class",
+    "species": "Human",
+    "status": "Deceased",
+    "first_appearance": {
+      "book_id": "b3",
+      "chapter": 9
+    },
+    "affiliations": [],
+    "summary": "Ji-Hoon was a human crawler from Korea who attempted to assassinate Princess Donut on the fourth floor's Desperado Club to claim her leaderboard bounty. His ambush failed when Donut survived his backstab via her cockroach skill and killed him by slashing his carotid artery. Consequently, he became the source of Princess Donut's very first Player Killer Skull.",
+    "id": "ji_hoon"
+  },
+  {
+    "name": "Justice Light",
+    "class": "Origamist",
+    "species": "Skyfowl",
+    "status": "Deceased",
+    "first_appearance": {
+      "book_id": "b4",
+      "chapter": 32
+    },
+    "affiliations": [
+      "Open Intellect Pacifist Network",
+      "Princess Posse"
+    ],
+    "summary": "Justice Light was a Skyfowl former crawler and trap master best known as the author of the eighth edition of the Dungeon Anarchist's Cookbook. He later joined the Princess Posse and the Open Intellect Pacifist Network during Faction Wars on the ninth floor to aid Carl. Ultimately, he triggered a cataclysmic trap that drained the Nothing into multiple lower levels of the dungeon before dying on the floor.",
+    "id": "justice_light"
+  },
+  {
+    "name": "Katia Grim",
+    "class": "Monster Truck Driver Class",
+    "species": "Human / Doppelgänger",
+    "status": "Alive",
+    "first_appearance": {
+      "book_id": "b2",
+      "chapter": 21
+    },
+    "affiliations": [
+      "Royal Court of Princess Donut",
+      "Safehome Yolanda",
+      "Desperado Club"
+    ],
+    "summary": "Katia Grim is a former art professor from Iceland and a crawler in the Dungeon. After joining Carl and Donut's party on the Third Floor, she develops into a momentum-based constitution tank utilizing her Doppelgänger shape-shifting abilities. Despite dealing with deep-seated personal trauma and severe physical injuries, she eventually escapes the Dungeon safely.",
+    "id": "katia_grim"
+  },
+  {
+    "name": "Koki",
+    "class": null,
+    "species": "Human",
+    "status": "Unknown",
+    "first_appearance": {
+      "book_id": "b3",
+      "chapter": 14
+    },
+    "affiliations": [
+      "SOS"
+    ],
+    "summary": "Koki is a human Earth crawler who originates from Japan. They are affiliated with the SOS organization.",
+    "id": "koki"
+  },
+  {
+    "name": "Langley",
+    "class": "Archer",
+    "species": "Human",
+    "status": "Deceased",
+    "first_appearance": {
+      "book_id": "b4",
+      "chapter": 3
+    },
+    "affiliations": [
+      "His own team of archers",
+      "Carl and Donut's party"
+    ],
+    "summary": "Langley was a human crawler from Earth and the leader of a six-man team of archers who were former car salesmen from Finland. He and his team became trusted allies to Carl and Donut on the fifth floor of the dungeon before being killed on the sixth floor while hunting player killers. His reanimated head later sacrificed itself to help Carl defeat the huntress Vrah.",
+    "id": "langley"
+  },
+  {
+    "name": "Low Thi",
+    "class": "D-Bag Geek Class",
+    "species": "Human",
+    "status": "Deceased",
+    "first_appearance": {
+      "book_id": null,
+      "chapter": 6
+    },
+    "affiliations": [],
+    "summary": "Low Thi was a human crawler in the Subterranean Quadrant of Bubble #543. During his time in the dungeon, he killed Wynne in pursuit of a quest and was later possessed before being killed by a Quetzalcoatlus.",
+    "id": "low_thi"
+  },
+  {
+    "name": "Lucia Mar",
+    "class": "Black Inquisitor General Class",
+    "species": "Human / Lajabless",
+    "status": "Alive",
+    "first_appearance": {
+      "book_id": "b1",
+      "chapter": 14
+    },
+    "affiliations": [
+      "Princess Posse"
+    ],
+    "summary": "Lucia Mar is a young teenage crawler from Ecuador and a former top-ranked contestant in the dungeon who competes alongside her two rottweilers, Cici and Gustavo 3. Later revelations show that her body serves as a vessel for the minds of roughly 120,000 children whose physical forms are held in a facility back on Earth. She becomes a formidable and unpredictable rival to Carl and Donut before eventually being conscripted into the Princess Posse.",
+    "id": "lucia_mar"
+  },
+  {
+    "name": "Maxim Popov",
+    "class": "Bogatyr Class",
+    "species": "Human / Nodling",
+    "status": "Unknown",
+    "first_appearance": {
+      "book_id": null,
+      "chapter": null
+    },
+    "affiliations": [],
+    "summary": "Maxim Popov is an Earth crawler participating in the Dungeon. System notes indicate he is counted as a separate crawler from Dmitri.",
+    "id": "maxim_popov"
+  },
+  {
+    "name": "Mike Barnes",
+    "class": "Banana Farmer Class",
+    "species": null,
+    "status": "Deceased",
+    "first_appearance": {
+      "book_id": null,
+      "chapter": 6
+    },
+    "affiliations": [
+      "Low Thi",
+      "Tyler Storm",
+      "Morris",
+      "Bobby"
+    ],
+    "summary": "Mike Barnes was a crawler in the Subterranean Quadrant of Bubble #543 who possessed the Banana Farmer Class. He used his druidic abilities to rapidly sprout banana tree seeds shot from his hands as an attack, despite having a relatively low attack range. He was eventually killed by a trap filled with finger-sized flesh weasels.",
+    "id": "mike_barnes"
+  },
+  {
+    "name": "Milk",
+    "class": "Cartographer",
+    "species": "Vesper and Xenopus",
+    "status": "Alive",
+    "first_appearance": {
+      "book_id": "b3",
+      "chapter": 27
+    },
+    "affiliations": [
+      "Calligraphy Guild",
+      "Cartography Guild"
+    ],
+    "summary": "Milk is a former crawler and the author of the 6th edition of the Dungeon Anarchist's Cookbook. She is a mapmaker who spent over 50 seasons trapped as the guildmaster of hidden guilds within the Dungeon before eventually being rescued by fellow crawlers. She is known for her contributions on portals, mapmaking, and ink recipes, as well as her deeply personal and sometimes cynical entries about surviving the crawl.",
+    "id": "milk"
+  },
+  {
+    "name": "Mistress Tiatha",
+    "class": "Green Caster",
+    "species": "Half elf",
+    "status": "Alive",
+    "first_appearance": {
+      "book_id": "b1",
+      "chapter": 22
+    },
+    "affiliations": [
+      "Elle McGibbons",
+      "Team Meadow Lark"
+    ],
+    "summary": "Mistress Tiatha is a former crawler and the manager for Elle McGibbons' team. She struggles with a drinking and smoking problem, treating her manager duties like a vacation, but has unique experience having once charmed a boss.",
+    "id": "mistress_tiatha"
+  },
+  {
+    "name": "Mordecai",
+    "class": "Non-Combatant NPC",
+    "species": "Skyfowl / Changeling",
+    "status": "Alive",
+    "first_appearance": {
+      "book_id": "b1",
+      "chapter": 2
+    },
+    "affiliations": [
+      "Royal Court of Princess Donut",
+      "Tutorial Guild",
+      "Desperado Club",
+      "Borant Corporation"
+    ],
+    "summary": "Mordecai is a former crawler and Level 50 Non-Combatant NPC who serves as the reluctant manager and primary lore and alchemy expert for Carl and Princess Donut. Because he took the changeling race during his own historical crawl, the dungeon assigns him a completely new mob form at the start of every floor. Beneath his cynical and grumpy exterior, he cares deeply for his party and carries a tragic past involving the loss of his brother and a long-held grudge against Odette.",
+    "id": "mordecai"
+  },
+  {
+    "name": "Morris",
+    "class": "Freelance Psychiatrist Class",
+    "species": "Human / Arachnid",
+    "status": "Deceased",
+    "first_appearance": {
+      "book_id": null,
+      "chapter": 6
+    },
+    "affiliations": [
+      "Low Thi",
+      "Tyler Storm",
+      "Mike Barnes",
+      "Bobby"
+    ],
+    "summary": "Morris was a crawler of the Arachnid species located in the Subterranean Quadrant of Bubble #543. He possessed the Freelance Psychiatrist Class and was later possessed before his death.",
+    "id": "morris"
+  },
+  {
+    "name": "Odette",
+    "class": null,
+    "species": "Human (non-terrestrial)",
+    "status": "Alive",
+    "first_appearance": {
+      "book_id": "b1",
+      "chapter": 28
+    },
+    "affiliations": [
+      "Titan Conglomerate",
+      "Nekhebit"
+    ],
+    "summary": "Odette is a former crawler and the enormously popular host of the private interview program Dungeon Crawler After Hours with Odette. Shrewd and transactional, she shadowed Carl and Donut early in their crawl using pre-purchased interview rights and later entered the Dungeon herself as an avatar of the goddess Nekhebit.",
+    "id": "odette"
+  },
+  {
+    "name": "Osvaldo",
+    "class": "Ranger",
+    "species": "Human / Curupira",
+    "status": "Deceased",
+    "first_appearance": {
+      "book_id": "b5",
+      "chapter": 69
+    },
+    "affiliations": [
+      "Team Flamengo"
+    ],
+    "summary": "Osvaldo was a Brazilian crawler and Curupira Ranger belonging to Team Flamengo who heavily specialized in dexterity. He became notable for his dispute with Prepotente over a Memorial Crystal and his journey through the later floors of the dungeon. He was ultimately killed on the tenth floor by Britney after his mount survived a race, preventing him from clearing the portal.",
+    "id": "osvaldo"
+  },
+  {
+    "name": "Paz Lo",
+    "class": "Santero Class",
+    "species": "Human",
+    "status": "Deceased",
+    "first_appearance": {
+      "book_id": null,
+      "chapter": 5
+    },
+    "affiliations": [],
+    "summary": "Paz Lo is a human crawler and cousin to Anton who holds the Santero Class. He is known to wear traditional medieval armor and possesses abilities including a directional self-destruct spell and a protective turtle shield. Paz is aligned with the god Ogun and was ultimately deceased during his time in the dungeon.",
+    "id": "paz_lo"
+  },
+  {
+    "name": "Penelope",
+    "class": null,
+    "species": "Yorkshire Sow",
+    "status": "Unknown",
+    "first_appearance": {
+      "book_id": null,
+      "chapter": 19
+    },
+    "affiliations": [],
+    "summary": "Penelope is a level 5 Yorkshire Sow who is magically protected by the thunder god Taranis. Anyone who harms her is marked for death, and she has been affected by the Snowdrop Curse which causes certain NPCs to fall helplessly in love with her.",
+    "id": "penelope"
+  },
+  {
+    "name": "Penn",
+    "class": "Fortification Engineer Class",
+    "species": "Human",
+    "status": null,
+    "first_appearance": {
+      "book_id": "b3",
+      "chapter": null
+    },
+    "affiliations": [
+      "Princess Posse"
+    ],
+    "summary": "Penn is a former crawler and tall, muscular human who comes back to help the Princess Posse during the Faction Wars on the Ninth Floor. He is a Fortification Engineer Class who is seen carrying a heavy steel H-beam on his shoulder.",
+    "id": "penn"
+  },
+  {
+    "name": "Porthus Hu",
+    "class": "Rogue",
+    "species": "High Elf",
+    "status": "Alive",
+    "first_appearance": {
+      "book_id": "b4",
+      "chapter": null
+    },
+    "affiliations": [
+      "Open Intellect Pacifist Action Network"
+    ],
+    "summary": "Dr. Porthus Hu is a former crawler and High Elf rogue who authored the second edition of the Dungeon Anarchist's Cookbook. After surviving the dungeon and completing a period of indentured servitude, he became the CEO and President of Outreach Operations for the Open Intellect Pacifist Action Network. He later acts as a sponsor and supporter for Carl and other crawlers.",
+    "id": "porthus"
+  },
+  {
+    "name": "Quan Ch",
+    "class": "Sergeant at Arms",
+    "species": "Half-Elf",
+    "status": "Deceased",
+    "first_appearance": {
+      "book_id": "b2",
+      "chapter": 24
+    },
+    "affiliations": [],
+    "summary": "Quan Ch is a human and half-elf crawler from Earth who rose to prominence after claiming a rare Celestial-tier robe on the third floor. Originally acting as a scavenger and kill-stealer, he later transformed into a deadly and prolific killer on the lower floors before finally being defeated in a card battle on the eighth floor. He was notable for his signature flying abilities, the loss of his left arm, and his high level in the dungeon.",
+    "id": "quan_ch"
+  },
+  {
+    "name": "Randall",
+    "class": null,
+    "species": "Human",
+    "status": "Deceased (x 2)",
+    "first_appearance": {
+      "book_id": "b1",
+      "chapter": 27
+    },
+    "affiliations": [
+      "Meadow Lark",
+      "Royal Court of Princess Donut"
+    ],
+    "summary": "Randall was an elderly patient from the Meadow Lark Elder Care Facility who entered the Dungeon as a crawler. He tragically died on the Second Floor before returning later in the series and ultimately meeting his final end on the Eighth Floor.",
+    "id": "randall"
+  },
+  {
+    "name": "Rebecca W",
+    "class": null,
+    "species": "Human",
+    "status": "Deceased",
+    "first_appearance": {
+      "book_id": "b1",
+      "chapter": 12
+    },
+    "affiliations": [],
+    "summary": "Rebecca W was a level 3 human crawler from near Seattle who reached the first floor of the Dungeon. She was gunned down and looted by fellow crawler Frank Q, who later claimed she was involved in human trafficking. Her tragic death sparked anger in Carl, who ultimately sought out her killer.",
+    "id": "rebecca_w"
+  },
+  {
+    "name": "Remex",
+    "class": "Dark Cleric",
+    "species": "Skyfowl",
+    "status": "Deceased",
+    "first_appearance": {
+      "book_id": "b2",
+      "chapter": 24
+    },
+    "affiliations": [],
+    "summary": "Remex, also known as Remex the Grand, was a former crawler and the first husband of Miss Quill who made it to the tenth floor in life. After his death, he was resurrected as a Soul Leech Capacitor, serving as a bereft minion. He was eventually killed and turned into this undead state, having previously been an infamous user of the Zerzura Spell.",
+    "id": "remex"
+  },
+  {
+    "name": "Rickard",
+    "class": null,
+    "species": "Unknown",
+    "status": "Unknown",
+    "first_appearance": {
+      "book_id": "b4",
+      "chapter": 25
+    },
+    "affiliations": null,
+    "summary": "Rickard is a former crawler and the author of the 24th Edition of the Dungeon Anarchist's Cookbook. He entered the dungeon alongside his pregnant wife, but she disappeared upon passing through the doors and he never saw her again.",
+    "id": "rickard"
+  },
+  {
+    "name": "Rosetta Thagra",
+    "class": "Gazetteer",
+    "species": "Crest",
+    "status": "Alive",
+    "first_appearance": {
+      "book_id": "b3",
+      "chapter": 13
+    },
+    "affiliations": [
+      "Open Intellect Pacifist Action Network",
+      "Crawler Project",
+      "Princess Posse"
+    ],
+    "summary": "Rosetta Thagra is an alien Crest, former crawler, and anarchist best known as the author of the ninth edition of the Dungeon Anarchist's Cookbook. After surviving a high-level crawl and an indentureship as a game guide, she became a journalist, filmmaker, and the host of Shadow Boxer. She later re-entered the dungeon as a mercenary colonel to fight alongside the Princess Posse and support her revolutionary comrades.",
+    "id": "rosetta_thagra"
+  },
+  {
+    "name": "Sadie",
+    "class": null,
+    "species": "Human",
+    "status": "Unknown",
+    "first_appearance": {
+      "book_id": "b3",
+      "chapter": 21
+    },
+    "affiliations": [
+      "Brynhild's Daughters"
+    ],
+    "summary": "Sadie is an Earth crawler who is a member of Brynhild's Daughters alongside Hekla. During their time in the Iron Tangle on the fourth floor, she successfully casts the Glass Prison spell on a Kravyad to allow her group to pass.",
+    "id": "sadie"
+  },
+  {
+    "name": "Silfa",
+    "class": "Holistic Healer Class",
+    "species": "Human Wisteria Fairy",
+    "status": "Deceased",
+    "first_appearance": {
+      "book_id": "b3",
+      "chapter": 22
+    },
+    "affiliations": [
+      "Brynhild's Daughters"
+    ],
+    "summary": "Silfa was a human wisteria fairy crawler and baker who participated in the dungeon as a holistic healer. She was a member of Brynhild's Daughters alongside her two daughters before ultimately being killed by Eva Sigrid.",
+    "id": "silfa"
+  },
+  {
+    "name": "Sister Ines Quiteria",
+    "class": "Poet Laureate",
+    "species": "Cat Girl",
+    "status": "Deceased",
+    "first_appearance": {
+      "book_id": "b3",
+      "chapter": 5
+    },
+    "affiliations": [
+      "Team Sister Ines",
+      "Club Vanquisher"
+    ],
+    "summary": "Sister Ines Quiteria is a Cuban nun and crawler who leads a three-member squad as a support-focused Poet Laureate. She enters the dungeon as a Cat Girl and relies on bard-like healing and buffing magic alongside a trident and various totems. She is eventually killed by Louis after being put to sleep, revealing that her body had been taken over by the goddess Ysalte.",
+    "id": "sister_ines"
+  },
+  {
+    "name": "Tin",
+    "class": null,
+    "species": "Unknown",
+    "status": "Unknown",
+    "first_appearance": {
+      "book_id": "b3",
+      "chapter": 32
+    },
+    "affiliations": [
+      "Anarchists"
+    ],
+    "summary": "Tin is a former Crawler and the author of the 21st Edition of the Dungeon Anarchist's Cookbook. They contributed several notes to the cookbook, including observations on how gods function similarly to biological armor and fluctuating opinions on spiders.",
+    "id": "tin"
+  },
+  {
+    "name": "Tipid",
+    "class": "Liquid Dervish",
+    "species": "Crest",
+    "status": "Alive",
+    "first_appearance": {
+      "book_id": "b3",
+      "chapter": null
+    },
+    "affiliations": [
+      "Princess Posse",
+      "Safehome Yolanda",
+      "Open Intellect Pacifist Action Network",
+      "Crawler Project"
+    ],
+    "summary": "Tipid is a veteran Crest former crawler and game guide who authored the fourth edition of the Dungeon Anarchist's Cookbook. Haunted by survivor's guilt from his original crawl, he joined an underground resistance network to fight the Syndicate. He later returns to the Dungeon during the Faction Wars as a mercenary and tactical advisor for the Princess Posse.",
+    "id": "tipid"
+  },
+  {
+    "name": "Tran",
+    "class": "Swashbuckler",
+    "species": "Human",
+    "status": "Alive",
+    "first_appearance": {
+      "book_id": "b4",
+      "chapter": 20
+    },
+    "affiliations": [
+      "Gwen's team",
+      "Team Katia",
+      "Princess Posse",
+      "102nd Bulwark Battalion"
+    ],
+    "summary": "Tran is a human crawler and Swashbuckler from Earth who fought alongside Gwendolyn Duet's team and later Team Katia. Despite losing both legs in the dungeon, he adapted by using various mechanical conveyances and continued to serve as a loyal fighter and officer. He eventually participated in the racing heats and volunteered for the transfer out to the Pineapple Cabaret.",
+    "id": "tran"
+  },
+  {
+    "name": "Tserendolgor",
+    "class": "Crisper Class",
+    "species": "Human / Dog Soldier",
+    "status": "Deceased",
+    "first_appearance": {
+      "book_id": "b3",
+      "chapter": 31
+    },
+    "affiliations": [
+      "Garret",
+      "Khulan",
+      "Chuluuna",
+      "Carl",
+      "Royal Court of Princess Donut"
+    ],
+    "summary": "Tserendolgor, also known as Ren, is a human crawler from Mongolia who chose the Dog Soldier race and Crisper Class upon entering the Dungeon. Despite initial friction with Princess Donut, she became a close ally to Carl's group and a prominent combatant using her signature flamethrower, Velma. She ultimately met her end on the eighth floor after sacrificing her gear and helping secure the path forward for Carl.",
+    "id": "tserendolgor"
+  },
+  {
+    "name": "Tyler Storm",
+    "class": "Weather Engineer Class",
+    "species": "Human",
+    "status": "Deceased",
+    "first_appearance": {
+      "book_id": null,
+      "chapter": 6
+    },
+    "affiliations": [
+      "Low Thi",
+      "Mike Barnes",
+      "Morris",
+      "Bobby"
+    ],
+    "summary": "Tyler Storm was a human crawler who held the Weather Engineer class in the Subterranean Quadrant of Bubble #543. He was level 26 and allied with several other crawlers before ultimately being killed by Chris Andrews while possessed by Maggie My.",
+    "id": "tyler_storm"
+  },
+  {
+    "name": "Uzzi",
+    "class": "Storm Commander Class",
+    "species": "Skyfowl",
+    "status": "Dead",
+    "first_appearance": {
+      "book_id": "b1",
+      "chapter": null
+    },
+    "affiliations": [
+      "Mordecai",
+      "Chaco",
+      "Hold Steady"
+    ],
+    "summary": "Uzzi was a Skyfowl crawler and the brother of Mordecai, having previously been teammates with Mordecai, Chaco, and Hold Steady. He chose the Storm Commander Class during his crawl and was ultimately killed by Chaco using the Dart of Ophiotaurus on the 11th floor.",
+    "id": "uzzi"
+  },
+  {
+    "name": "Vadim",
+    "class": "Gut Rearranger Class",
+    "species": "Human",
+    "status": "Deceased",
+    "first_appearance": {
+      "book_id": null,
+      "chapter": null
+    },
+    "affiliations": [],
+    "summary": "Vadim, also known as Doctor Vadim, was a human cosmetic surgeon from Ukraine who entered the dungeon as a crawler. He was infamous for having impregnated many of his clients and was covered in sheaves containing daggers. He ultimately died after being killed by jellyfish in the Sea quadrant of Bubble #543.",
+    "id": "vadim"
+  },
+  {
+    "name": "Volteeg",
+    "class": "Tank Buttress",
+    "species": "Sturnus Gargoyle",
+    "status": "Unknown",
+    "first_appearance": {
+      "book_id": null,
+      "chapter": null
+    },
+    "affiliations": [
+      "Operatic Collective",
+      "Rampart Guild",
+      "Operatic Banker’s Federation"
+    ],
+    "summary": "Volteeg is a former crawler and the author of a single entry in the seventh edition of the Dungeon Anarchist's Cookbook. Originally entering the dungeon as a pet to Mistress Henspar, he eventually survived and took a deal, later returning during Faction Wars as a mercenary. Due to his race's physiology, spending time in heavy gravity outside the dungeon causes him to physically collapse without a brace.",
+    "id": "volteeg"
+  },
+  {
+    "name": "Yolanda Martinez",
+    "class": null,
+    "species": "Human",
+    "status": "Deceased",
+    "first_appearance": {
+      "book_id": "b1",
+      "chapter": 22
+    },
+    "affiliations": [
+      "Meadow Lark"
+    ],
+    "summary": "Yolanda Martinez was a warm, dedicated human crawler and former Certified Nursing Assistant who entered the dungeon alongside her nursing home residents and colleagues in the Meadow Lark party. Armed with a bow and arrow, she bravely fought on the first and second floors before meeting a tragic end when she was killed by a Rage Elemental. Her selflessness and maternal warmth left a profound and lasting impact on Carl, Imani, and the rest of her surviving party members.",
+    "id": "yolanda_martinez"
+  },
+  {
+    "name": "York",
+    "class": "Advocate",
+    "species": "Tenodera",
+    "status": "Alive",
+    "first_appearance": {
+      "book_id": "b3",
+      "chapter": 15
+    },
+    "affiliations": [
+      "Open Intellect Action Network",
+      "Poetry guild"
+    ],
+    "summary": "York is a Tenodera former crawler and level 71 Advocate who authored the tenth edition of the Dungeon Anarchist's Cookbook. Despite coming from a hive, he felt profoundly isolated throughout his crawl and developed severe emotional numbness, which he attempted to combat through the obsessive writing of poetry. He later became a captain in the Open Intellect Pacifist Action Network and a resistance operative aiding the fight against the system.",
+    "id": "york"
+  },
+  {
+    "name": "Yvette",
+    "class": null,
+    "species": "Human",
+    "status": "Deceased",
+    "first_appearance": {
+      "book_id": "b1",
+      "chapter": 43
+    },
+    "affiliations": [
+      "Frank Q",
+      "Maggie My"
+    ],
+    "summary": "Yvette was a teenage human crawler who entered the dungeon with her estranged parents after running away from home on the night of the collapse. She was reluctant to kill things and was ultimately strangled to death by her mother to end her suffering after she was severely injured.",
+    "id": "yvette"
+  },
+  {
+    "name": "Zeynep",
+    "class": "Boring Ol' Mage Class",
+    "species": "Human",
+    "status": "Deceased",
+    "first_appearance": {
+      "book_id": "b3",
+      "chapter": 32
+    },
+    "affiliations": [
+      "Desperado Club"
+    ],
+    "summary": "Zeynep was a human crawler from the Middle East who entered the dungeon alongside her party members. She met Carl on the eighth floor where they traded fist bumps, and she later helped save him by casting a Mute Spell on Emir. Tragically, she and her party were later conscripted by Madness, resulting in her gruesome death.",
+    "id": "zeynep"
+  },
+  {
+    "name": "Zhang",
+    "class": "Earth Mover",
+    "species": "Human",
+    "status": "Alive",
+    "first_appearance": {
+      "book_id": "b1",
+      "chapter": 42
+    },
+    "affiliations": [
+      "Team Li Na",
+      "Safehome Yolanda",
+      "Princess Posse",
+      "Desperado Club"
+    ],
+    "summary": "Zhang is a human crawler from China who entered the Dungeon alongside his best friend Li Jun and Li Na. He serves as a reliable and selfless member of Team Li Na, eventually taking on the Earth Mover class and utilizing a shrinking wand and other supportive abilities. Though quiet and timid, he deeply cares for his companions and plays a crucial role in various team campaigns before ultimately transferring out of the dungeon.",
+    "id": "zhang"
   }
 ]
