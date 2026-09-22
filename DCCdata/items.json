@@ -1,0 +1,154 @@
+[
+  {
+    "name": "Apothecary Beanie",
+    "type": "Hat",
+    "effects": [
+      "+ 3% Strength",
+      "+ 3% Intelligence",
+      "+ 3% Constitution",
+      "+ 3% Dexterity",
+      "+ 3% Charisma",
+      "I Need My Personal Space Spell"
+    ],
+    "source": "Benefactor Box",
+    "summary": "The Apothecary Beanie is a knitted hat that boosts all base stats by 3% and grants the wearer the I Need My Personal Space Spell. Katia Grim receives the beanie from a Benefactor Box on the Sixth Floor and later gives it to Carl, who uses its spell during a crucial moment to save Diwata from a Mantis.",
+    "image": "Magical apothecary beanie.webp",
+    "id": "apothecary_beanie",
+    "source_url": "https://dungeon-crawler-carl.fandom.com/wiki/Apothecary_Beanie"
+  },
+  {
+    "name": "Bard's Golden Throat",
+    "type": "Face Covering",
+    "effects": [
+      "Automatically tunes songs to within one and a half steps of the correct note",
+      "Assists in the proper formation of bard based songs and spells",
+      "Amplifies noise to twice normal volume, which can be increased to five times normal volume",
+      "+5% charisma"
+    ],
+    "source": null,
+    "summary": "The Bard's Golden Throat is an enchanted headset microphone that automatically tunes songs, assists in forming bard-based songs and spells, and amplifies sound. Additionally, it grants the wearer a 5% bonus to their charisma.",
+    "image": "Legendary Diva by JohnRubio.jpg",
+    "id": "bard_s_golden_throat",
+    "source_url": "https://dungeon-crawler-carl.fandom.com/wiki/Bard%27s_Golden_Throat"
+  },
+  {
+    "name": "Belt of Buoyancy",
+    "type": "Equipped Item, Accessory, Quadruped",
+    "effects": [
+      "Prevents the wearer from sinking in water"
+    ],
+    "source": "Silver I'm Wet Box",
+    "summary": "The Belt of Buoyancy is an accessory that prevents its wearer from sinking when they are in water. It can also be fitted onto quadrupeds by wrapping it around their stomach.",
+    "image": null,
+    "id": "belt_of_buoyancy",
+    "source_url": "https://dungeon-crawler-carl.fandom.com/wiki/Belt_of_Buoyancy"
+  },
+  {
+    "name": "Bomb Upgrade Patch",
+    "type": "Upgrade Patch (Medium) Stitched",
+    "effects": [
+      "+11% to Constitution",
+      "+6% damage to all explosives",
+      "+2 to the Dangerous Explosives Handling Skill",
+      "+15% Discount from traveling Spider Reaper Minion merchants"
+    ],
+    "source": "Gold Spicy Box",
+    "summary": "The Bomb Upgrade Patch is a medium-sized stitched upgrade patch made from Spider Reaper Minion thread silk. It can be affixed to an eligible garment, such as the Enchanted Anarchist's Battle Rattle, to provide bonuses to constitution, explosive damage, skill levels, and merchant discounts. It is obtained on the Sixth Floor from a Gold Spicy Box rewarded for an achievement.",
+    "image": "Bomb_patch.png",
+    "id": "bomb_upgrade_patch",
+    "source_url": "https://dungeon-crawler-carl.fandom.com/wiki/Bomb_Upgrade_Patch"
+  },
+  {
+    "name": "Book Burner Patch",
+    "type": "Upgrade Patch (Medium) Embroidered",
+    "effects": [
+      "+15% to Intelligence",
+      "The Book Burner benefit"
+    ],
+    "source": "Gold Talk of the Town Box",
+    "summary": "The Book Burner Upgrade Patch is a medium-sized embroidered upgrade patch that depicts a burning book. Obtained from a Gold Talk of the Town Box on the eighth floor, it grants the wearer an intelligence boost and the Book Burner benefit when affixed to an eligible garment.",
+    "image": "Book_burner_patch.PNG",
+    "id": "book_burner_patch",
+    "source_url": "https://dungeon-crawler-carl.fandom.com/wiki/Book_Burner_Patch"
+  },
+  {
+    "name": "Cloak of the Benevolent Champion",
+    "type": "Celestial Cloak / Shoulder Accessory",
+    "effects": [
+      "Matches lowest base stat to highest over 66 hours",
+      "Level 5 Find Weakened skill",
+      "Raises four random spells and one random skill to Level 15 over time"
+    ],
+    "source": "Looted from Quan Ch; originally awarded via a Celestial Quest Box during the Fools Who Broke the Glass Quest",
+    "summary": "The Cloak of the Benevolent Champion is a unique Celestial-tier shoulder accessory that was originally awarded to the crawler Quan Ch before being acquired by Carl and worn by Princess Donut. Its primary ability raises the wearer's lowest base stat to match their highest base stat over the course of 66 hours, while also providing spell and skill level boosts and the Find Weakened skill. It must be worn continuously to maintain its countdown and effects.",
+    "image": "Cloak of benevolent champion.webp",
+    "id": "cloak_of_the_benevolent_champion",
+    "source_url": "https://dungeon-crawler-carl.fandom.com/wiki/Cloak_of_the_Benevolent_Champion"
+  },
+  {
+    "name": "Enchanted Anarchist's Battle Rattle",
+    "type": "Clothing (Chest)",
+    "effects": [
+      "+1 STR",
+      "+1 INT",
+      "+1 CON",
+      "+1 DEX",
+      "+1 CHA",
+      "+50% Range - all thrown explosives",
+      "+50% Accuracy - all thrown explosives",
+      "Access: Desperado Club",
+      "Access: Naughty Boys Employment Agency"
+    ],
+    "source": "Platinum Spicy Box",
+    "summary": "The Enchanted Anarchist's Battle Rattle is a highly upgradeable sleeveless canvas jacket that provides stat bonuses and grants access to special clubs and agencies. It features slots for various upgrade patches that can further enhance its protection and abilities. Carl receives the jacket on the fifth floor as a reward for the Soft Vore Achievement.",
+    "image": "Carl by Kippin21.jpg",
+    "id": "enchanted_anarchist_s_battle_rattle",
+    "source_url": "https://dungeon-crawler-carl.fandom.com/wiki/Enchanted_Anarchist%27s_Battle_Rattle"
+  },
+  {
+    "name": "Enchanted Anklet of the Fallen Oak",
+    "type": "Bracelet",
+    "effects": [
+      "+1 Dexterity",
+      "+1 Constitution",
+      "+3 to the skill Double Tap Skill"
+    ],
+    "source": "looted from Grace Bautista 3's corpse",
+    "summary": "The Enchanted Anklet of the Fallen Oak is a wooden bracelet featuring three small seed pod-like beads that make a quiet noise when shaken. It provides minor stat and skill bonuses to the wearer. Princess Donut wears it on the Third Floor, which leads the 201st Security Group Militia to mistakenly believe she is the mythical Oak Fell.",
+    "image": "Enchanted Anklet of the Fallen Oak.png",
+    "id": "enchanted_anklet_of_the_fallen_oak",
+    "source_url": "https://dungeon-crawler-carl.fandom.com/wiki/Enchanted_Anklet_of_the_Fallen_Oak"
+  },
+  {
+    "name": "Enchanted Auto Buckler of the Peach Pit",
+    "type": "Shield",
+    "effects": [
+      "Forms a metallic buckler on command",
+      "Enchanted with Shatter Spell",
+      "Any attack that lands upon this shield has a 1.5% chance to disarm the opponent",
+      "If the opponent is disarmed, there is a 90% chance the item will drop to the ground, a 5% chance the weapon will break, and a 5% chance the weapon will be immediately transferred to your own inventory"
+    ],
+    "source": "Loot Box",
+    "summary": "The Enchanted Auto Buckler of the Peach Pit is an arm bracer that transforms into a metallic buckler shield upon a flick of the wrist. It possesses the Shatter enchantment and can potentially disarm attackers, dropping, breaking, or stealing their weapon.",
+    "image": "00516.jpg",
+    "id": "enchanted_auto_buckler_of_the_peach_pit",
+    "source_url": "https://dungeon-crawler-carl.fandom.com/wiki/Enchanted_Auto_Buckler_of_the_Peach_Pit"
+  },
+  {
+    "name": "Enchanted BigBoi Boxers",
+    "type": "Equippable, Enchanted",
+    "effects": [
+      "+2 Constitution",
+      "Lvl 15 Protective Shell Spell (once every 30 hrs)",
+      "+5 Constitution",
+      "+5 Dexterity",
+      "+5 Intelligence",
+      "Freeballing Benefit"
+    ],
+    "source": "Bronze Boss Box for killing the Krakaren Clone (Second Floor)",
+    "summary": "The Enchanted BigBoi Boxers are white boxers covered in red hearts designed for size-altering races and wearers like Carl. They provide defensive and stat-boosting benefits, including a Protective Shell Spell, and can be upgraded using a Scroll of Upgrade.",
+    "image": "Boxers and kneepads.jpg",
+    "id": "enchanted_bigboi_boxers",
+    "source_url": "https://dungeon-crawler-carl.fandom.com/wiki/Enchanted_BigBoi_Boxers"
+  }
+]

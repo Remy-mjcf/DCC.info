@@ -1,0 +1,132 @@
+[
+  {
+    "name": "Akuma",
+    "role": "Leader of the War Mage Rebellion",
+    "species": "War Mage",
+    "first_appearance": {
+      "book_id": "b3",
+      "chapter": null
+    },
+    "related_crawlers": [
+      "Elle McGibbons"
+    ],
+    "summary": "Akuma is a level 100 War Mage and the leader of the War Mage Rebellion, described as an extremely powerful magic caster and a very unpleasant individual. Originating as a high elf cobbler merged through multiple re-sleeving iterations, he possesses vast spellcasting knowledge. During the Faction Wars, he attacks Elle McGibbons, kills Stalwart, and steals the Gate of the Feral Gods.",
+    "id": "akuma"
+  },
+  {
+    "name": "Amayon",
+    "role": "Prince",
+    "species": "Demon",
+    "first_appearance": {
+      "book_id": "b3",
+      "chapter": 58
+    },
+    "related_crawlers": [
+      "Carl"
+    ],
+    "summary": "Amayon is a level 250 demon prince from Sheol who is cast out into the Eighth Floor after being betrayed by his brother. He possesses the Madre de Aguas in Havana and attempts to cast a massive spell to inhale all the souls in the Cuba area. Eventually, he returns to the Fifteenth Floor to wage war against his brothers after discussing a deal regarding Ysalte and his child.",
+    "id": "amayon"
+  },
+  {
+    "name": "Anaconda",
+    "role": "Exotic Dancer",
+    "species": "Quarter Naga",
+    "first_appearance": {
+      "book_id": "b6",
+      "chapter": 23
+    },
+    "related_crawlers": [
+      "Princess Donut",
+      "Carl"
+    ],
+    "summary": "Anaconda is a level 75 Quarter Naga NPC who works as a lead exotic dancer at the Penis Parade strip club in the Desperado Club. He is a favorite performer of Princess Donut and exhibits deep familial loyalty. After tragedy strikes his family, he joins his brother on a quest for vengeance.",
+    "id": "anaconda"
+  },
+  {
+    "name": "Apollon the Mighty",
+    "role": "Strongman",
+    "species": "Nodling / Ogre",
+    "first_appearance": {
+      "book_id": "b2",
+      "chapter": 6
+    },
+    "related_crawlers": [
+      "Carl",
+      "Princess Donut"
+    ],
+    "summary": "Apollon the Mighty is an elite strongman and ogre who worked in Grimaldi's Traveling Circus on the third floor. Formerly a nodling tattooed on Tsarina Signet's skin, he served ice cream cones filled with parasitic worms to unsuspecting visitors. He was later encountered by Carl and Donut during their exploration of the circus.",
+    "id": "apollon_the_mighty"
+  },
+  {
+    "name": "Areson the Wise",
+    "role": "Strongman",
+    "species": "Ogre",
+    "first_appearance": {
+      "book_id": "b3",
+      "chapter": 13
+    },
+    "related_crawlers": null,
+    "summary": "Areson the Wise is an ogre and strongman who is the brother of Apollon and Herman. Formerly a nodling, he is allied with Tsarina Signet.",
+    "id": "areson_the_wise"
+  },
+  {
+    "name": "Armita",
+    "role": "Ascension Liaison",
+    "species": "Human (non Earth)",
+    "first_appearance": {
+      "book_id": "b3",
+      "chapter": null
+    },
+    "related_crawlers": [
+      "Odette"
+    ],
+    "summary": "Armita is a former crawler and Ascension Liaison who was part of Odette's party. She acted as a go-between in a failed bribery attempt involving Huanxin Jinx, which ultimately resulted in her death.",
+    "id": "armita"
+  },
+  {
+    "name": "Astrid",
+    "role": "Assistant Manager of the Desperado Club",
+    "species": "Bloodlust Sprite",
+    "first_appearance": {
+      "book_id": "b3",
+      "chapter": 9
+    },
+    "related_crawlers": [
+      "Carl",
+      "Princess Donut",
+      "Katia Grim"
+    ],
+    "summary": "Astrid was a level 125 Bloodlust Sprite and the Assistant Manager of the Desperado Club who possessed powerful cardiovascular magic and psionic abilities. She interacted with Carl and Donut on the third floor and was later assassinated by Katia Grim and Carl on the Eighth Floor as part of a quest.",
+    "id": "astrid"
+  },
+  {
+    "name": "Author Steve Rowland",
+    "role": "Stripper / Dancer / Mercenary",
+    "species": "Forest Troll",
+    "first_appearance": {
+      "book_id": "b6",
+      "chapter": 23
+    },
+    "related_crawlers": [
+      "Carl",
+      "Princess Donut",
+      "Katia Grim"
+    ],
+    "summary": "Author Steve Rowland is a Level 50 Forest Troll who initially works as an exotic dancer at the Desperado Club. After the club is destroyed, Carl hires him and his fellow dancers as mercenaries, leading Steve to join the crawlers' entourage and fight alongside them until he is pulled into Sheol during the Eighth Floor battle.",
+    "id": "author_steve_rowland"
+  },
+  {
+    "name": "Big Tina",
+    "role": "City Boss",
+    "species": "Allosaurus",
+    "first_appearance": {
+      "book_id": "b3",
+      "chapter": null
+    },
+    "related_crawlers": [
+      "Miriam Dom"
+    ],
+    "summary": "Big Tina is a level 80 allosaurus city boss and the subject of the quest The Recital on the sixth floor. Formerly an ursine child who loved to dance, she was transformed into a dinosaur during Scolopendra's Nine-Tier Attack while her mother and village mothers became protective raptors accompanying her. She was briefly afflicted with vampirism and went on rampages before eventually being recruited by the Royal Court of Princess Donut.",
+    "id": "big_tina"
+  }
+]

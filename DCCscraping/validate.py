@@ -13,12 +13,14 @@ Checks per file:
   - no duplicate ids within the file
 
 Cross-file reference checks (only run with no entity_type filter, since
-they require multiple files):
-  - crawlers[].first_appearance.book_id      -> books.json
-  - npcs[].first_appearance.book_id          -> books.json
-  - npcs[].related_crawlers[]                -> crawlers.json
-  - tattoos[].acquired.book_id                -> books.json
-  - tattoos[].crawler_id                      -> crawlers.json
+they require multiple files). Each matches against either the target's
+"id" field or, for related_crawlers (stored as human-readable names,
+never slugified), its "name" field:
+  - crawlers[].first_appearance.book_id      -> books.json.id
+  - npcs[].first_appearance.book_id          -> books.json.id
+  - npcs[].related_crawlers[]                -> crawlers.json.name
+  - tattoos[].acquired.book_id                -> books.json.id
+  - tattoos[].crawler_id                      -> crawlers.json.id
 
 Usage:
     python validate.py             # validate everything present + cross-references
@@ -45,11 +47,14 @@ ENTITY_FILES = {
 }
 
 REFERENCE_CHECKS = [
-    ("crawlers.json", "first_appearance.book_id", "books.json"),
-    ("npcs.json", "first_appearance.book_id", "books.json"),
-    ("npcs.json", "related_crawlers", "crawlers.json"),
-    ("tattoos.json", "acquired.book_id", "books.json"),
-    ("tattoos.json", "crawler_id", "crawlers.json"),
+    # (source file, field path, target file, target field to match against)
+    # related_crawlers holds human-readable names (never converted to ids by
+    # extract.py), so it must match crawlers.json's "name" field, not "id".
+    ("crawlers.json", "first_appearance.book_id", "books.json", "id"),
+    ("npcs.json", "first_appearance.book_id", "books.json", "id"),
+    ("npcs.json", "related_crawlers", "crawlers.json", "name"),
+    ("tattoos.json", "acquired.book_id", "books.json", "id"),
+    ("tattoos.json", "crawler_id", "crawlers.json", "id"),
 ]
 
 
@@ -76,7 +81,9 @@ def load_data_file(data_file: str):
 
 
 def validate_file(schema_file: str, data_file: str):
-    """Returns (ids, errors) for one DCCdata file. ids is None if the file is absent."""
+    """Returns (values, errors) for one DCCdata file. values is None if the file
+    is absent, otherwise a dict of field name ("id", "name") -> set of that
+    field's values across all records, for cross-file reference lookups."""
     data, load_errors = load_data_file(data_file)
     if load_errors:
         return None, load_errors
@@ -87,36 +94,39 @@ def validate_file(schema_file: str, data_file: str):
     validator = Draft202012Validator(schema)
 
     errors = []
-    ids = []
+    values: dict[str, set] = {"id": set(), "name": set()}
     seen_ids = set()
     for idx, record in enumerate(data):
         label = f"{data_file}[{idx}] (id={record.get('id', '?')})" if isinstance(record, dict) else f"{data_file}[{idx}]"
         for error in validator.iter_errors(record):
             errors.append(f"{label}: {error.message}")
-        if isinstance(record, dict) and "id" in record:
-            if record["id"] in seen_ids:
-                errors.append(f"{label}: duplicate id '{record['id']}' in {data_file}")
-            seen_ids.add(record["id"])
-            ids.append(record["id"])
+        if isinstance(record, dict):
+            if "id" in record:
+                if record["id"] in seen_ids:
+                    errors.append(f"{label}: duplicate id '{record['id']}' in {data_file}")
+                seen_ids.add(record["id"])
+                values["id"].add(record["id"])
+            if "name" in record:
+                values["name"].add(record["name"])
 
     print(f"{data_file}: {len(data)} record(s), {len(errors)} error(s)")
-    return set(ids), errors
+    return values, errors
 
 
-def check_references(all_ids: dict[str, set]) -> list[str]:
+def check_references(all_values: dict[str, dict[str, set]]) -> list[str]:
     errors = []
-    for source_file, field_path, target_file in REFERENCE_CHECKS:
-        if source_file not in all_ids or target_file not in all_ids:
+    for source_file, field_path, target_file, target_field in REFERENCE_CHECKS:
+        if source_file not in all_values or target_file not in all_values:
             continue
         data, _ = load_data_file(source_file)
-        target_ids = all_ids[target_file]
+        target_values = all_values[target_file][target_field]
         for idx, record in enumerate(data):
             value = get_path(record, field_path)
             if value is None:
                 continue
             refs = value if isinstance(value, list) else [value]
             for ref in refs:
-                if ref not in target_ids:
+                if ref not in target_values:
                     label = f"{source_file}[{idx}] (id={record.get('id', '?')})"
                     errors.append(f"{label}: {field_path} references '{ref}', not found in {target_file}")
     return errors
@@ -131,20 +141,20 @@ def main():
     entity_types = [args.entity_type] if args.entity_type else sorted(ENTITY_FILES)
 
     all_errors = []
-    all_ids: dict[str, set] = {}
+    all_values: dict[str, dict[str, set]] = {}
     for entity_type in entity_types:
         schema_file, data_file = ENTITY_FILES[entity_type]
-        ids, errors = validate_file(schema_file, data_file)
-        if ids is None and not errors:
+        values, errors = validate_file(schema_file, data_file)
+        if values is None and not errors:
             print(f"{data_file}: skip (not present)")
             continue
-        if ids is not None:
-            all_ids[data_file] = ids
+        if values is not None:
+            all_values[data_file] = values
         all_errors.extend(errors)
 
     if args.entity_type is None:
         print("Checking cross-references...")
-        ref_errors = check_references(all_ids)
+        ref_errors = check_references(all_values)
         all_errors.extend(ref_errors)
         print(f"  {len(ref_errors)} reference error(s)")
 
