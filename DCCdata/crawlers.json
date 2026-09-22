@@ -1474,5 +1474,115 @@
     ],
     "summary": "Zhang is a human crawler from China who entered the Dungeon alongside his best friend Li Jun and Li Na. He serves as a reliable and selfless member of Team Li Na, eventually taking on the Earth Mover class and utilizing a shrinking wand and other supportive abilities. Though quiet and timid, he deeply cares for his companions and plays a crucial role in various team campaigns before ultimately transferring out of the dungeon.",
     "id": "zhang"
+  },
+  {
+    "name": "Coolie",
+    "class": null,
+    "species": "Unknown",
+    "status": "Deceased",
+    "first_appearance": {
+      "book_id": "b3",
+      "chapter": null
+    },
+    "affiliations": null,
+    "summary": "Coolie was a former crawler from the planet Qurux and a notable author of the Dungeon Anarchist's Cookbook. They gained popularity through appearances on multiple Syndicate programs during their time in the Dungeon. Coolie ultimately met their demise after attempting to assassinate two Dungeon Admins by blowing up a Syndicate ship in orbit.",
+    "id": "coolie"
+  },
+  {
+    "name": "Hold Steady",
+    "class": null,
+    "species": null,
+    "status": "Unknown",
+    "first_appearance": {
+      "book_id": null,
+      "chapter": null
+    },
+    "affiliations": [],
+    "summary": "Hold Steady was a former teammate of Mordecai alongside Uzzi and Chaco. He appeared to possess significant magical abilities.",
+    "id": "hold_steady"
+  },
+  {
+    "name": "Ian",
+    "class": null,
+    "species": "Human / Bush Elf",
+    "status": "Unknown",
+    "first_appearance": {
+      "book_id": "b5",
+      "chapter": 1
+    },
+    "affiliations": [
+      "Borant Corporation"
+    ],
+    "summary": "Ian is a former crawler and current Non-Combatant NPC working as a Registration Arena Attendant in Club Vanquisher. Originally human, he chose the Bush Elf race during a previous season of the dungeon. He and his brother took indentureship deals to exit the dungeon, though his brother was later murdered by Vrah.",
+    "id": "ian"
+  },
+  {
+    "name": "Nihit Kumar",
+    "class": null,
+    "species": "Human",
+    "status": "Dead",
+    "first_appearance": {
+      "book_id": null,
+      "chapter": null
+    },
+    "affiliations": [],
+    "summary": "Nihit Kumar was a human crawler who was killed by a Shambling Berserker. His death was mentioned in the announcement of the Creeping Apocalypse quest.",
+    "id": "nihit_kumar"
+  },
+  {
+    "name": "Ossie",
+    "class": null,
+    "species": "Unknown",
+    "status": "Unknown",
+    "first_appearance": {
+      "book_id": null,
+      "chapter": null
+    },
+    "affiliations": [
+      "Former Crawlers",
+      "Anarchists",
+      "Aliens"
+    ],
+    "summary": "Ossie is a former crawler and the author of the 18th edition of the Dungeon Anarchist's Cookbook, which took the form of scrolls. In their writings, Ossie expressed theories about the origins of NPCs and offered tactical advice on creating confusion among enemies.",
+    "id": "ossie"
+  },
+  {
+    "name": "Pieter",
+    "class": null,
+    "species": null,
+    "status": "Dead",
+    "first_appearance": {
+      "book_id": null,
+      "chapter": null
+    },
+    "affiliations": [],
+    "summary": "Pieter was Odette's cousin who met a tragic end when Odette was forced by the AI to choose between his death or the death of her friend Armita. He was a former crawler in the dungeon.",
+    "id": "pieter"
+  },
+  {
+    "name": "Priestly",
+    "class": null,
+    "species": "Unknown",
+    "status": "Deceased (presumed)",
+    "first_appearance": {
+      "book_id": "b4",
+      "chapter": null
+    },
+    "affiliations": null,
+    "summary": "Priestly was a former crawler and the author of the 14th edition of the Dungeon Anarchist's Cookbook, known for providing extensive information on the Ninth Floor Faction Wars. During the wars, they were conscripted by a Bugbear faction to march against the Skull Empire, which severely fractured their mental state as they witnessed the destruction of the city of Larracos. Priestly is presumed to have committed suicide before returning to the ruined city.",
+    "id": "priestly"
+  },
+  {
+    "name": "Sinjin",
+    "class": null,
+    "species": "Unknown",
+    "status": "Deceased (Presumed)",
+    "first_appearance": {
+      "book_id": "b3",
+      "chapter": null
+    },
+    "affiliations": null,
+    "summary": "Sinjin was a former crawler and author of the 15th Edition of the Dungeon Anarchist's Cookbook. He came from a race with paws and was likely killed by the dungeon goddess Kuraokami after attempting to leave her faith.",
+    "id": "sinjin"
   }
 ]

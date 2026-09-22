@@ -26,17 +26,6 @@ yet. Needs a real decision on how position_3d gets populated:
 Whichever direction, this is the biggest remaining gap between "data
 pipeline is complete" and "site is complete."
 
-## 11 flagged crawler pages need a human look
-
-`DCCscraping/needs_review/Characters/`: Coolie, Hold Steady, Ian,
-Nihit Kumar, Ossie, Pieter, Priestly, Ronaldo Qu, Simoom, Sinjin (10
-files) -- flagged for too many null required fields, i.e. the wiki
-article itself is thin (brief mentions, not full character pages).
-Options per entry: hand-fill the missing fields from the article text
-in the `.json` review file and promote it into `crawlers.json`, or
-decide some of these are too minor to bother with and just leave them
-in needs_review indefinitely. Worth a pass to sort which is which.
-
 ## extract.py: retryDelay parsing (nice-to-have, carried over from round 1)
 
 429 responses include a `retryDelay` field (e.g. "Please retry in
